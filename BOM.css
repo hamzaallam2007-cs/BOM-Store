@@ -1,0 +1,1132 @@
+/*Main tags*/
+:root {
+    --brand-pink: #f2689e;
+    --brand-dark: #1a1a1a;
+    --brand-blue: #08b0ff;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-title {
+    display: table; 
+    margin: 180px auto 40px auto; 
+    text-align: center;
+    padding: 10px 40px; 
+    border-top: 1px solid var(--brand-pink);
+    border-bottom: 1px solid var(--brand-pink);
+    font-size: 20px; 
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 50%, #f2689e 100%);
+    background-attachment: fixed;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: transparent;
+    border-bottom: 1px solid var(--glass-border);
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img, .logo-img { 
+    height: 100px; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 25px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { 
+    color: var(--brand-pink); 
+}
+
+.nav-actions { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.search-box input {
+    padding: 8px 18px;
+    border: 1px solid var(--brand-pink);
+    border-radius: 25px; 
+    background: white;
+    color: black; 
+    outline: none;
+    width: 160px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    box-shadow: 0 0 10px rgba(242, 104, 158, 0.4);
+}
+
+.nav-icon { 
+    color: var(--brand-pink) !important; 
+    font-size: 20px; 
+    transition: 0.3s; 
+    text-decoration: none;
+}
+
+.nav-icon:hover { 
+    color: white !important; 
+    transform: scale(1.1);
+}
+
+.nav-actions { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.account-btn {
+    background-color: var(--brand-pink);
+    color: black;
+    border: 2px solid var(--brand-pink);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+.account-btn:hover {
+    background-color: black;
+    color: var(--brand-pink);
+    border-color: black;
+    transform: translateY(-2px);
+}
+
+/*Account page*/
+.edit-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid var(--brand-pink);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-btn:hover {
+    background: var(--brand-pink);
+    color: black;
+}
+
+.account-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 150px 5% 50px; 
+}
+
+.account-container .main-title {
+    text-align: left;        
+    margin-left: 0;          
+    padding-left: 0;
+    font-style: italic;      
+    font-size: 45px;         
+    font-weight: bold;
+    color: white;
+    margin-top: 60px;        
+    margin-bottom: 30px;
+    border: none;            
+}
+
+.profile-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.profile-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; }
+
+.user-avatar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid var(--brand-pink);
+    object-fit: cover;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.info-text, .info-text-input {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.info-label {
+    color: #000000 !important; 
+    font-weight: 800;          
+    font-size: 13px;           
+    text-transform: uppercase; 
+    display: block;
+    margin-bottom: 5px;      
+}
+
+.info-box span:first-child {
+    color: #000000 !important;
+}
+
+.recommended-section { 
+    margin-bottom: 60px; 
+}
+
+.section-subtitle a{
+    text-decoration: none;
+    color: white;
+}
+
+.products-grid, .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 15px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    border-color: var(--brand-pink);
+    box-shadow: 0 10px 20px rgba(242, 104, 158, 0.2);
+}
+
+.product-img img, .product-image img {
+    width: 100%;
+    height: 460px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.4s ease;
+}
+
+.product-card:hover .product-img img { 
+    transform: scale(1.05); 
+}
+
+.product-info h3 { 
+    font-size: 20px; 
+    color: white; 
+    margin-bottom: 8px; 
+    text-align: left; 
+}
+
+.product-info p {
+    font-size: 14px;
+    color: var(--brand-pink);
+    font-weight:bold;
+    font-size:15px;
+    line-height: 1.4;
+    text-align: right;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* --- تأثير خاص بصفحة الـ Clothing فقط --- */
+
+/* نحدد الـ product-card اللي جوه الـ product-grid بس */
+.product-grid .product-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    position: relative;
+    transform-origin: center;
+    background: rgba(255, 255, 255, 0.05); /* شكل زجاجي خفيف يماشي الصفحة */
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* حركة الميل يمين والرفعة لفوق */
+.product-grid .product-card:hover {
+    /* rotate(3deg) هي اللي بتعمل الميل يمين */
+    transform: translateY(-10px) rotate(3deg) !important;
+    
+    /* ضل ناعم بيتحرك مع الميل */
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.4) !important;
+    
+    /* تحديد الحواف باللون البينك */
+    border: 1px solid var(--brand-pink) !important;
+    z-index: 5;
+}
+
+/* حركة الصورة جوه الكارت */
+.product-grid .product-image img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-grid .product-card:hover .product-image img {
+    transform: scale(1.08); /* زووم خفيف للصورة */
+}
+
+/* تظبيط الـ Info تحت الصورة */
+.product-info h3 {
+    font-size: 14px;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+.product-info p {
+    color: var(--brand-pink);
+    font-weight: bold;
+}
+
+.order-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.order-img img { 
+    width: 70px; 
+    height: 70px; 
+    border-radius: 10px; 
+    object-fit: cover; 
+}
+
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Clothes page*/
+.category-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+}
+
+/* 1. تنسيق العناوين (Collections) - ألوان ثابتة */
+
+/* Men's Collection - أبيض */
+.category-section:not(.women):not(.kids) .clothing-card h3 {
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+/* Women's Collection - بينك */
+.category-section.women .clothing-card h3 {
+    color: #f2689e !important;
+    transition: all 0.3s ease;
+}
+
+/* Kids' Collection - أزرق */
+.category-section.kids .clothing-card h3 {
+    color: #00d2ff !important;
+    transition: all 0.3s ease;
+}
+
+/* 2. تنسيق SHOP NOW (أبيض للكل في الحالة العادية) */
+
+.clothing-card a, 
+.clothing-card a i {
+    color: #ffffff !important; /* لون أبيض دايماً */
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out; /* حركة ناعمة جداً */
+}
+
+/* 3. تأثير الـ Hover (لما الماوس يلمس الكارت أو اللينك) */
+
+/* لما تلمس الكارت.. الـ SHOP NOW والسهم يقلبوا Pink عند الكل */
+.clothing-card:hover a, 
+.clothing-card:hover a i {
+    color: #f2689e !important; /* اللون البينك وقت الـ Hover */
+}
+
+/* حركة السهم لوحدها (يزحف يمين) */
+.clothing-card:hover a i {
+    transform: translateX(10px);
+}
+
+/* توهج خفيف للعناوين لما تلمس الكارت (Glow Effect) */
+.category-section.women .clothing-card:hover h3 {
+    text-shadow: 0 0 15px rgba(242, 104, 158, 0.4);
+}
+
+.category-section.kids .clothing-card:hover h3 {
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+/* 1. الحاوية بتاعة الصورة */
+.product-image {
+    width: 100%;
+    height: 400px; /* ثبت الطول ده عشان كل الصور تبقى مقاس واحد */
+    overflow: hidden; /* عشان لو الصورة كبيرة متطلعش بره الإطار */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* الإطار اللي كنت عامله */
+    border-radius: 10px 10px 0 0; /* لو عايز حواف مدورة من فوق بس */
+    padding: 0 !important; /* أهم سطر: بيلغي أي مسافة بين الصورة والإطار */
+    margin: 0 !important;
+    background: #000; /* خلفية سودة لو الصورة متحملتش */
+}
+
+/* 2. الصورة نفسها جوه الحاوية */
+.product-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* السحر هنا: بيخلي الصورة تملا المربع بدون ما تتمط */
+    object-position: center; /* بيخلي نص الصورة هو اللي باين */
+    display: block; /* بيلغي المسافة الرفيعة اللي بتبقى تحت الصور */
+    transition: transform 0.5s ease;
+}
+
+/* 3. تأثير الـ Hover (الزووم اللي عملناه) */
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+
+/*About page*/
+.head {
+    color: var(--brand-pink);
+}
+
+.dtitle {
+    color: #F0298A;
+}
+
+.list {
+    color: #E388B5;
+    padding-left: 40px;
+}
+
+h4{
+    text-align: right;
+    margin-right: 50%;
+    font-style: italic;
+    font-weight: 350;
+}
+
+.info-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40%;
+    padding-bottom: 30px;
+}
+
+.contact-us {
+    color: #ffffff;
+    font-size: medium;
+}
+
+.info-mess {
+    font-size: medium;
+    font-style: italic;
+}
+
+@media (max-width: 600px){
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.stars i {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.stars i:hover {
+    color: gold;
+    opacity: 0.6;
+}
+
+/*Home page*/
+
+
+.banner { 
+    padding-top: 150px; 
+}
+
+.brands-title, .new-arrivals {
+    position: absolute;
+    top: 0;
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    color: white;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-style: italic; 
+    font-weight: bold; 
+    border-bottom: 3px solid #ff007f; 
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+
+.brands-title {
+    left: 10px;
+}
+
+.new-arrivals {
+    left: 850px;
+}
+
+.brands-header-container {
+    position: relative; 
+    width: 100%;
+    height: 80px; 
+    margin-top: 80px; 
+    margin-bottom: 20px;
+}
+
+.grid-brands {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 50px;
+    align-items: start;
+    padding-left: 0px;
+    margin-top: 20px; 
+}
+
+.brands img {
+    display: block;
+    width: 400px;
+    height: 120px;
+    margin-bottom: 20px; 
+    border-radius: 12px;
+    object-fit: contain;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.model-video img, .model-video video { 
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/*Footer*/
+.site-footer { 
+    padding: 60px 0 20px; 
+    border-top: 1px solid var(--glass-border); 
+    margin-top: 50px; 
+}
+
+.footer-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: space-between; 
+}
+
+.footer-column h3 { 
+    color: var(--brand-pink); 
+    margin-bottom: 15px; 
+}
+
+.footer-column p, .footer-column a { 
+    color: #ccc; 
+    text-decoration: none; 
+    font-size: 14px; 
+    line-height: 2; 
+}
+
+.footer-bottom {
+    text-align:center;
+    font-size:10px;
+    color:#ccc;
+}
+
+
+
+
+
+
+
+
+/*product*/
+/* الحاوية الأساسية للأيقونة والرقم */
+.nav-icon {
+    position: relative; /* ده اللي بيثبت الرقم فوق الأيقونة */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 35px;  /* مساحة كافية للأيقونة */
+    height: 35px;
+}
+
+/* الرقم (الـ Zero) */
+.badge-count {
+    position: absolute;
+    top: -2px;       /* ارفعه فوق الأيقونة */
+    right: -2px;     /* حركه على طرف الأيقونة يمين */
+    background-color: var(--brand-pink);
+    color: #000;     /* رقم أسود عشان يبان */
+    font-size: 10px;
+    font-weight: 800;
+    width: 16px;     /* عرض ثابت عشان يطلع دايرة */
+    height: 16px;    /* طول ثابت عشان يطلع دايرة */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000; /* تحديد بسيط عشان ينطق */
+    z-index: 10;     /* عشان يظهر فوق الأيقونة دايماً */
+}
+
+/* تأكد إن الأيقونة نفسها في النص */
+.nav-icon i {
+    font-size: 20px;
+    color: var(--brand-pink);
+}
+/* --- Product Content Styling --- */
+
+.product-page-content {
+    padding: 40px 5%; /* مسافة مريحة من الجوانب ومن تحت الـ Nav */
+}
+
+/* ستايل زرار الفلتر */
+.filter-bar {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid var(--brand-pink);
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background: var(--brand-pink);
+    color: black;
+}
+
+/* شبكة الـ 12 صورة */
+.products-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 صور في الصف */
+    gap: 30px;
+}
+
+/* كارت المنتج */
+.item-card {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.item-card:hover {
+    border-color: var(--brand-pink);
+    transform: translateY(-5px);
+}
+
+/* أيقونة القلب اللي "جنب" الصورة من فوق */
+.wishlist-heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wishlist-heart:hover {
+    background: var(--brand-pink);
+    color: black;
+}
+
+/* الصورة والـ Hover */
+.item-img-box {
+    position: relative;
+    width: 100%;
+    height: 350px; /* طول الصورة المظبوط */
+}
+
+.item-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.item-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+.view-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* معلومات المنتج تحت الصورة */
+.item-info {
+    padding: 15px;
+}
+
+.item-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #eee;
+}
+
+.item-price {
+    color: var(--brand-pink);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Responsive: 2 في الصف للموبايل */
+@media (max-width: 900px) {
+    .products-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* --- تصحيح مكان المحتوى --- */
+.product-page-content {
+    /* الزقة دي هي اللي هتنزل الفلتر تحت الـ Nav الموحد بتاعك */
+    margin-top: 150px !important; 
+    padding: 0 5%;
+    width: 100%;
+}
+
+/* زرار الفلتر على الشمال خالص */
+.filter-bar {
+    display: flex;
+    justify-content: flex-start; /* لفت لفت يا بطل */
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid var(--brand-pink);
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+/* الـ Grid الـ 12 منتج */
+.products-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 في الصف */
+    gap: 25px;
+    padding-bottom: 50px;
+}
+
+/* كارت المنتج (Product Card) */
+.product-card {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: var(--brand-pink);
+    transform: translateY(-5px);
+}
+
+/* أيقونة القلب (Wishlist) بجانب المنتج */
+.wish-heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(0,0,0,0.3);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wish-heart:hover {
+    color: var(--brand-pink);
+    transform: scale(1.2);
+}
+
+.product-img-holder {
+    width: 100%;
+    height: 400px; /* طول الصورة */
+    overflow: hidden;
+}
+
+.product-img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.product-name {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: var(--brand-pink);
+    font-weight: bold;
+    font-size: 18px;
+}
+.filter-bar {
+    display: flex;
+    justify-content: space-between; /* الفلتر شمال والترتيب يمين */
+    align-items: center;
+    margin-top: 160px; /* المسافة دي عشان ينزل تحت الـ Navbar */
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.sort-select {
+    background: #000;
+    color: white;
+    border: 1px solid var(--brand-pink);
+    padding: 10px 15px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* تأكد إن حاوية الصورة هي المرجع */
+.product-img-holder {
+    position: relative !important; /* مهم جداً */
+    overflow: hidden !important;   /* عشان الزرار ميبانش وهو برا الصورة */
+    height: 400px;
+    width: 100%;
+}
+
+/* الطبقة اللي فيها الزرار (البينك) */
+.quick-add-overlay {
+    position: absolute;
+    bottom: -70px; /* خليه مستخبي تحت خالص */
+    left: 0;
+    width: 100%;
+    height: 60px; /* طول الشريط البينك */
+    background: var(--brand-pink); /* اللون البينك بتاعك */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out; /* حركة ناعمة */
+    z-index: 20;
+}
+
+/* لما نلمس الكارت (product-card) الزرار "ينط" فوق الصورة */
+.product-card:hover .quick-add-overlay {
+    bottom: 0 !important; /* يظهر فجأة فوق الصورة من تحت */
+}
+
+/* زرار الـ Add to Cart نفسه */
+.add-cart-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-cart-btn i {
+    font-size: 14px;
+}
+/* ستايل الـ Badge (New / Sale) */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #fff;
+    color: #000;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 900;
+    border-radius: 4px;
+    z-index: 5;
+    letter-spacing: 1px;
+}
+
+.product-badge.sale {
+    background: #ff4757; /* لون أحمر للسيل */
+    color: #fff;
+}
+
+/* ستايل النجوم */
+.product-rating {
+    margin: 8px 0;
+    color: #ffc107; /* لون دهبي */
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.product-rating span {
+    color: #888;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+/* تعديل بسيط للـ Info عشان الكلام ميبقاش لازق في بعضه */
+.product-info {
+    padding: 15px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* مسافة بين السعرين */
+    margin-top: 5px;
+}
+
+.price-old {
+    color: #fefbfb; /* لون رمادي باهت */
+    text-decoration: line-through; /* الخط اللي بيشطب على السعر */
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.product-price {
+    color: var(--brand-pink); /* السعر الجديد بلون البراند بتاعك */
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0; /* عشان مياخدش مسافة زيادة */
+}
+
+/* --- تظبيط الـ Filter Bar والـ Search --- */
+
+/* 1. تنسيق شريط البحث اللي في الـ Navbar */
+.search-box input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.search-box input:focus {
+    border-color: #f2689e; /* يقلب بينك لما تيجي تكتب */
+    box-shadow: 0 0 10px rgba(242, 104, 158, 0.2);
+    width: 250px; /* يوسع سنة وهو بيبحث */
+}
+
+/* 2. تنسيق منطقة الفلاتر (Filter Bar) */
+.filter-bar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 3. تنسيق القوائم المنسدلة (Select Tags) */
+.sort-select {
+    background: #121212; /* لون غامق يماشي الـ Dark Mode */
+    color: white;
+    border: 1px solid #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.sort-select:hover {
+    border-color: #f2689e; /* يقلب بينك عند اللمس */
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: #f2689e;
+    box-shadow: 0 0 10px rgba(242, 104, 158, 0.3);
+}
+
+/* 4. تظبيط شكل الـ Grid عشان المنتجات متتحركش لما حد يختفي */
+.products-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    transition: all 0.5s ease-in-out; /* انيميشن ناعم لما المنتجات تظهر وتختفي */
+}
+
+/* 5. انيميشن ظهور المنتجات */
+.product-card {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

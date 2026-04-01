@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM-Men Products</title>
+    <link rel="stylesheet" href="Bom.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="product-page">
+    
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="BOM-logo" class="logo-img">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="clothing.html">CLOTHES</a></li>
+            <li><a href="#">COSMETICS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+            
+            <a href="#" class="nav-icon">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count">2</span>
+            </a>
+            
+            <a href="#" class="nav-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge-count">5</span>
+            </a>
+            
+            <a href="account.html">
+                <button class="account-btn">My Account</button>
+            </a>
+        </div>
+    </nav>
+
+    <main class="product-page-content">
+        
+        <div class="filter-bar">
+            <div class="filter-section">
+                <select id="categoryFilter" class="sort-select" style="margin-right: 10px;">
+                    <option value="all">ALL CATEGORIES</option>
+                    <option value="hoodie">HOODIES</option>
+                    <option value="shoes">SHOES</option>
+                    <option value="shirt">SHIRTS</option>
+                    <option value="jacket">JACKETS</option>
+                    <option value="jeans">JEANS</option>
+                </select>
+            </div>
+
+            <div class="sort-section">
+                <select id="priceFilter" class="sort-select">
+                    <option value="all">SORT BY PRICE</option>
+                    <option value="low">Under EGP 3000</option>
+                    <option value="mid">EGP 3000 - 8000</option>
+                    <option value="high">Above EGP 8000</option>
+                </select>
+            </div>
+        </div>
+        
+
+        <div class="products-grid-container" id="productsGrid">
+    
+            <div class="product-card hoodie" data-price="1430">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/beige hoodie.jpg" alt="beige hoodie">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Beige classic Hoodie-pull&bear</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(24)</span>
+                    </div>
+                    <p class="product-price">EGP 1430</p>
+                </div>
+            </div>
+
+            <div class="product-card shirt" data-price="1100">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/black stretched polo shirt.webp" alt="polo shirt">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Black Stretched polo shirt-Zara</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(18)</span>
+                    </div>
+                    <p class="product-price">EGP 1100</p>
+                </div>
+            </div>
+
+            <div class="product-card jacket" data-price="3100">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/black suit.png" alt="Suit">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Black Suit-pull&bear</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(42)</span>
+                    </div>
+                    <div class="price-wrapper">
+                    <span class="price-old">EGP 4200</span>
+                    <span class="product-price">EGP 3100</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shoes" data-price="14000">
+                <div class="product-badge">LIMITED</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/grey nike air jordan.jpg" alt="Nike shoes">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Grey Air Jordan-Nike</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(150)</span>
+                    </div>
+                    <p class="product-price">EGP 14000</p>
+                </div>
+            </div>
+
+            <div class="product-card hoodie" data-price="5500">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/white hoodie.jpg" alt="White hoodie">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">White Hoodie-Gap</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(31)</span>
+                    </div>
+                    <p class="product-price">EGP 5500</p>
+                </div>
+            </div>
+
+            <div class="product-card shoes" data-price="8600">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/white classic puma shoes.jpg" alt="Puma Shoes">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">White Classic Shoes-Puma</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(67)</span>
+                    </div>
+                    <p class="product-price">EGP 8600</p>
+                </div>
+            </div>
+
+            <div class="product-card shoes" data-price="9700">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/black adidas campus.jpg" alt="Adidas Shoes">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Black campus Shoes-Adidas</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(89)</span>
+                    </div>
+                    <p class="product-price">EGP 9700</p>
+                </div>
+            </div>
+
+            <div class="product-card shirt" data-price="3650">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/addidas shirt.jpg" alt="Adidas Shirt">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">White Shirt-Adidas</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(12)</span>
+                    </div>
+                    <div class="price-wrapper">
+                    <span class="price-old">EGP 4000</span>
+                    <span class="product-price">EGP 3650</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card jacket" data-price="11800">
+                <div class="product-badge">HOT</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/leather black jacket.jpg" alt="Product">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Black Leather Jacket-Zara</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(55)</span>
+                    </div>
+                    <p class="product-price">EGP 11800</p>
+                </div>
+            </div>
+
+            <div class="product-card shirt" data-price="900">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/black cap.jpg" alt="Gap Cap">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Black Cap-Gap</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(94)</span>
+                    </div>
+                    <p class="product-price">EGP 900</p>
+                </div>
+            </div>
+
+            <div class="product-card hoodie" data-price="12000">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/dark blue pullover.jpg" alt="Gucci pullover">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Dark Blue pullover-Gucci</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(10)</span>
+                    </div>
+                    <div class="price-wrapper">
+                    <span class="price-old">EGP 13999</span>
+                    <span class="product-price">EGP 12000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card jeans" data-price="3100">
+                <div class="product-badge">BEST</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/Levis Baggy jeans.jpg" alt="levis jeans">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Light blue baggy jeans-Levis</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(112)</span>
+                    </div>
+                    <p class="product-price">EGP 3100</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h3>About BOM</h3>
+                <p>BOM Store is your destination for trends. Quality and style in one place.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Men's Collection</a></li>
+                    <li><a href="#">Women's Collection</a></li>
+                    <li><a href="#">Kidz Collection</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script>
+        const categoryFilter = document.getElementById('categoryFilter');
+        const priceFilter = document.getElementById('priceFilter');
+        const searchInput = document.getElementById('searchInput');
+        const products = document.querySelectorAll('.product-card');
+
+        function filterProducts() {
+            const categoryValue = categoryFilter.value;
+            const priceValue = priceFilter.value;
+            const searchValue = searchInput.value.toLowerCase();
+
+            products.forEach(product => {
+                const productCategory = product.classList.contains(categoryValue) || categoryValue === 'all';
+                const productPrice = parseInt(product.getAttribute('data-price'));
+                const productName = product.querySelector('.product-name').innerText.toLowerCase();
+                
+                // فلتر السعر
+                let priceMatch = false;
+                if (priceValue === 'all') priceMatch = true;
+                else if (priceValue === 'low' && productPrice < 3000) priceMatch = true;
+                else if (priceValue === 'mid' && productPrice >= 3000 && productPrice <= 8000) priceMatch = true;
+                else if (priceValue === 'high' && productPrice > 8000) priceMatch = true;
+
+                // فلتر البحث بالاسم
+                const searchMatch = productName.includes(searchValue);
+
+                // التنفيذ: لو كله تمام اظهر المنتج
+                if (productCategory && priceMatch && searchMatch) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        // تشغيل الفلتر أول ما نغير أي حاجة
+        categoryFilter.addEventListener('change', filterProducts);
+        priceFilter.addEventListener('change', filterProducts);
+        searchInput.addEventListener('input', filterProducts);
+    </script>
+
+</body>
+</html>
