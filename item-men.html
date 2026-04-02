@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grey Air Jordan - BOM Store</title>
+    <link rel="stylesheet" href="BOM.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="details-page">
+    
+   <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="BOM Logo" class="logo-img">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="clothing.html">Clothes</a></li>
+            <li><a href="cosmetic.html">Cosmetics</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+        <a href="#" class="nav-icon">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count">2</span>
+            </a>
+           <a href="#" class="nav-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge-count">5</span>
+            </a>
+            
+            <button class="account-btn">My Account</button>
+        </div>
+    </nav>
+    <br>
+
+
+    <main class="product-container">
+        <div class="product-left">
+            <div class="main-image-holder">
+                    <div class="item-badge">LIMITED</div>
+                <img src="images/grey nike air jordan.jpg" id="mainImg" alt="Grey Air Jordan">
+            </div>
+            <div class="small-images">
+                <img src="images/grey nike air jordan.jpg" class="thumb active" onclick="changeImg(this.src)">
+                <img src="images/grey nike air jordan 2.jpg" class="thumb" onclick="changeImg(this.src)">
+                <img src="images/grey nike air jordan 3.jpg" class="thumb" onclick="changeImg(this.src)">
+            </div>
+        </div>
+
+        <div class="product-right">
+            <nav class="breadcrumb">Men / Shoes / Nike / Air Jordan</nav>
+            <h1 class="p-title">Grey Nike Air Jordan</h1>
+            <div class="p-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span>(150 Reviews)</span>
+            </div>
+            <p class="p-price">EGP 14,000</p>
+            
+            <p class="p-description">
+                The Air Jordan 1 High "Grey" updates the iconic silhouette with a premium leather finish and classic cushioning for all-day comfort.
+            </p>
+
+            <div class="p-options">
+                <h3>Select Size</h3>
+                <div class="size-chips">
+                    <button class="size-chip">40</button>
+                    <button class="size-chip active">41</button>
+                    <button class="size-chip">42</button>
+                    <button class="size-chip">43</button>
+                    <button class="size-chip">44</button>
+                </div>
+            </div>
+
+            <div class="p-actions">
+                <div class="quantity">
+                    <button onclick="changeQty(-1)">-</button>
+                    <input type="number" value="1" id="qty">
+                    <button onclick="changeQty(1)">+</button>
+                </div>
+                <button class="add-to-cart-big">ADD TO CART</button>
+                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+            <div class="p-extra-info">
+                <p><i class="fa-solid fa-truck-fast"></i> Free Delivery on orders over EGP 5000</p>
+                <p><i class="fa-solid fa-rotate-left"></i> 14 Days easy return policy</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // وظيفة تبديل الصور
+        function changeImg(smallImgSrc) {
+            var fullImg = document.getElementById("mainImg");
+            fullImg.src = smallImgSrc;
+        }
+
+        // وظيفة زيادة ونقصان الكمية
+        function changeQty(val) {
+            var qtyInput = document.getElementById("qty");
+            var currentVal = parseInt(qtyInput.value);
+            var newVal = currentVal + val;
+            
+            if (newVal >= 1) {
+                qtyInput.value = newVal;
+            }
+        }
+    </script>
+</body>
+</html>
