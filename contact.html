@@ -3,9 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BOM store-About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="BOM.css">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="BOM Logo" class="logo-img">
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="clothing.html">Clothes</a>
+            <a href="cosmetic.html">Cosmetics</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+          <a href="#" class="nav-icon">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count">2</span>
+            </a>
+           <a href="#" class="nav-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge-count">5</span>
+            </a>
+            <a href="account.html">
+            <button class="account-btn">My Account</button>
+            </a>
+        </div>
+    </nav>
+
+    <header class="main-title">
+        <h1>Contact us</h1>
+    </header>
+    <main class="container">
+        <section>
+                <h5>Having any questions or problems? <br> Get in touch with us!!</h5>
+        </section>
+
+        <section>
+            <div class="contact-grid">
+                <div class="contact-big"><p>Add your comment/feedback</p><br>
+                    <form>
+                       <textarea id="comment" name="comment" cols="100" rows="10" placeholder="Add a comment/feedback"></textarea>
+                        <button type="button" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                <p>Store's Email: <a href="mailto:BOM_Store@gmail.com">BOM_Store@gmail.com</a></p>
+                <p>Store's Phone Number: <a href="tel:+201234567890">+201234567890</a></p>
+                <p>Customer service:-</p>
+                <h4>-Sunday to Thursday: 9AM-8PM <br>
+                    -Friday and Saturday: 9AM-10PM</h4>
+            </div>
+        </section>
+
+        <section>
+            <div class="links">
+                <h3>For more of us and our products</h3>
+                <h4>Follow us on: </h4>
+               <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </section>
+
+        <section>
+<button class="chat-btn" onclick="toggleChat()">💬</button>
+
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">Chat with us</div>
+  
+  <div class="chat-messages" id="messages">
+    <div class="message bot">Hi! How can I help you?</div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="input" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+function toggleChat() {
+  let box = document.getElementById("chatBox");
+  box.style.display = box.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  let input = document.getElementById("input");
+  let messages = document.getElementById("messages");
+
+  if (input.value.trim() === "") return;
+
+  // User message
+  let userMsg = document.createElement("div");
+  userMsg.className = "message user";
+  userMsg.innerText = input.value;
+  messages.appendChild(userMsg);
+
+  // Fake bot reply
+  let botMsg = document.createElement("div");
+  botMsg.className = "message bot";
+
+  if (input.value.toLowerCase().includes("price")) {
+    botMsg.innerText = "Our prices start from EGP900.";
+  } else if (input.value.toLowerCase().includes("shirt size")) {
+    botMsg.innerText = "We have sizes from S to XL.";
+  }  else if (input.value.toLowerCase().includes("shoe size")) {
+    botMsg.innerText = "We have sizes from 36 to 44.";
+  } else {
+    botMsg.innerText = "Thanks! We'll get back to you soon.";
+  }
+
+  setTimeout(() => {
+    messages.appendChild(botMsg);
+    messages.scrollTop = messages.scrollHeight;
+  }, 500);
+
+  input.value = "";
+}
+</script>
+
+
+        </section>
+    </main>    
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h3>About BOM</h3>
+                <p>BOM Store is your destination for trends. Quality and style in one place.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul><li><a href="contact.html">Contact Us</a></li></ul>
+                <ul><li><a href="about.html">About Us</a></li></ul>
+
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="men.html">Men's Collection</a></li>
+                    <li><a href="women.html">Women's Collection</a></li>
+                    <li><a href="#">Kids' Collection</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
 </body>
 </html>
