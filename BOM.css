@@ -1450,3 +1450,89 @@ h5{
   text-align: left;
   color: green;
 }
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;        
+  margin: 0;        
+  padding: 0;         
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc; 
+}
+
+.item img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+
+  background: #fff;           
+  padding: 8px;              
+  border-radius: 10px;        
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cash-box {
+  background:rgba(0,0,0,0.2);
+  color: white;
+
+  padding: 25px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 420px;
+
+  margin-top: 25px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.cash-box h3 {
+  margin-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+
+  background: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: #333;
+}
