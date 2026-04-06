@@ -1512,6 +1512,81 @@ h5{
   cursor: pointer;
 }
 
+
+/*filter*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0; /* slide in from left */
+  background-color: var(--brand-dark);
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.3s;
+  border-left: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.sidebar label {
+  display: block;
+  margin: 10px;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--brand-pink);
+  text-decoration: none;
+}
+
+.products {
+  margin: 20px;
+}
+
+.product {
+  border: 1px solid #eee;
+  margin: 10px;
+  padding: 10px;
+}
+
+.sidebar h3{
+    margin-left: 10px;
+    color: var(--brand-pink);
+}
+
+.sidebar button{
+    margin-left: 10px;
+    border-color: var(--glass-border);
+    font-size: large;
+    background-color: var(--brand-pink);
+    cursor: pointer;
+    color: var(--brand-dark);
+    transition: all 0.4s;
+}
+
+.sidebar button:hover{
+    background-color: var(--brand-dark);
+    color: var(--brand-pink);
+}
+
+.filter_btn{
+    border-color: var(--glass-border);
+    font-size: large;
+    background-color: var(--brand-dark);
+    cursor: pointer;
+    color: var(--brand-pink);
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+
+.filter_btn:hover{
+    background-color: var(--brand-pink);
+    color: var(--brand-dark);
+}
 .checkout-btn:hover {
   background: #333;
 }
