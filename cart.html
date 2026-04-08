@@ -96,28 +96,12 @@
 
   <div class="row total">
     <span>Total</span>
-    <span>EGP 30,690.00</span>
+    <p>EGP <span id="total">0</span></p>
   </div>
 
   <button class="checkout-btn">Checkout</button>
 </div>
- 
-<p>Total: EGP <span id="total">0</span></p>
-  <script>
-  let prices = document.querySelectorAll(".price");
-  let total = 0;
-
-  prices.forEach(price => {
-    total += Number(price.textContent);
-  });
-
-  document.getElementById("total").textContent = total;
-</script>
-
-</div>
-
-  
-
+ </div>
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-column">
@@ -143,7 +127,19 @@
             <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
-</body>
 
+      <script>
+  let prices = document.querySelectorAll(".price");
+  let total = 0;
+
+  prices.forEach(price => {
+    total += Number(price.textContent);
+  });
+
+  document.getElementById("total").textContent = total;
+</script>
+
+
+</body>
 </html>
 
