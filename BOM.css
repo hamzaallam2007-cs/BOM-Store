@@ -1444,41 +1444,64 @@ h5{
 
 
 
+/* PAGE LAYOUT */
+.cart-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* left = items, right = checkout */
+  gap: 40px;
+  padding: 20px;
+}
+
+/* LEFT SIDE: ITEMS */
+.cart-items {
+  display: flex;
+  flex-direction: column; /* 🔥 THIS FIXES YOUR ISSUE */
+  gap: 20px;
+}
+
+
 .item {
   display: flex;
   align-items: center;
   gap: 15px;
   padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc;
 }
+
 
 .item img {
   width: 160px;
   height: 160px;
   object-fit: cover;
-  background: #fff;           
-  padding: 8px;              
-  border-radius: 10px;        
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 .details {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack name + price */
+  gap: 8px;
+  color: white;
 }
 
+
 .cash-box {
-  background:rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
   color: white;
   padding: 25px;
   border-radius: 18px;
-  width: 100%;
-  max-width: 420px;
-  margin-top: 25px;
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+
+  position: sticky;   /* 🔥 stays top right */
+  top: 20px;
+
+  height: fit-content;
 }
+
 
 .cash-box h3 {
   margin-bottom: 15px;
@@ -1488,7 +1511,6 @@ h5{
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: white;
 }
 
 .total {
@@ -1499,18 +1521,83 @@ h5{
   padding-top: 10px;
 }
 
+
 .checkout-btn {
   width: 100%;
   margin-top: 20px;
   padding: 12px;
   border: none;
   border-radius: 10px;
-
   background: black;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
+
+.checkout-btn:hover {
+  background: #333;
+}
+
+/* SUGGESTIONS (FULL WIDTH BELOW) */
+.suggestion-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 40px; /* space for arrows */
+  overflow-x: hidden;
+
+
+}
+
+/* 🔥 THIS fixes them being side-by-side */
+.suggestion-card {
+  min-width: 180px;   /* prevents shrinking */
+  flex-shrink: 0;     /* keeps them in a row */
+  background:transparent;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* image styling */
+.suggestion-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.suggestions-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* left & right positions */
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
 
 
 /*filter*/
