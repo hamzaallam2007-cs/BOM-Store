@@ -52,7 +52,7 @@
                 <div class="contact-big"><p>Add your comment/feedback</p><br>
                     <form>
                        <textarea id="comment" name="comment" cols="100" rows="10" placeholder="Add a comment/feedback"></textarea>
-                        <button type="button" class="submit-btn">Submit</button>
+                        <input type="submit" class="submit-btn">
                     </form>
                 </div>
                 <p>Store's Email: <a href="mailto:BOM_Store@gmail.com">BOM_Store@gmail.com</a></p>
@@ -139,10 +139,12 @@ function sendMessage() {
   if (input.value.toLowerCase().includes("price")) {
     botMsg.innerText = "Our prices start from EGP900.";
   } else if (input.value.toLowerCase().includes("shirt size")) {
-    botMsg.innerText = "We have sizes from S to XL.";
+    botMsg.innerText = "We have sizes from S to XL for adults and from 6 to 16 for kids.";
   }  else if (input.value.toLowerCase().includes("shoe size")) {
     botMsg.innerText = "We have sizes from 36 to 44.";
-  } else {
+  } else if (input.value.toLowerCase().includes("size")){
+    botMsg.innerText = "We have sizes from 36 to 44 for shoes, sizes from S to XL for adults and from 6 to 16 for kids.";
+  }else {
     botMsg.innerText = "Thanks! We'll get back to you soon.";
   }
 
