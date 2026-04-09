@@ -1136,8 +1136,14 @@ body {
     padding: 20px;
 }
 
-.product-left { flex: 1.2; }
-.product-right { flex: 1; color: white; }
+.product-left { 
+    flex: 1.2; 
+}
+
+.product-right { 
+    flex: 1; 
+    color: white; 
+}
 
 .main-image-holder {
     background: #1a1a1a;
@@ -1172,13 +1178,41 @@ body {
 }
 
 /* تفاصيل الكتابة */
-.breadcrumb { color: #888; font-size: 14px; margin-bottom: 10px; }
-.p-title { font-size: 32px; margin-bottom: 10px; }
-.p-price { font-size: 24px; color: #f2689e; font-weight: bold; margin: 20px 0; }
-.p-description { color: #ccc; line-height: 1.6; margin-bottom: 30px; }
+.breadcrumb { 
+    color: #888; 
+    font-size: 14px; 
+    margin-bottom: 10px; 
+}
+
+.p-title { 
+    font-size: 32px; 
+    margin-bottom: 10px; 
+}
+
+.p-price { 
+    font-size: 24px; 
+    color: #f2689e; 
+    font-weight: bold; 
+    margin: 20px 0; 
+}
+
+.p-description { 
+    color: #ccc; 
+    line-height: 1.6; 
+    margin-bottom: 30px; 
+}
+
+.p-rating i{
+    color: yellow;
+}
 
 /* المقاسات */
-.size-chips { display: flex; gap: 10px; margin-top: 10px; }
+.size-chips { 
+    display: flex; 
+    gap: 10px; 
+    margin-top: 10px; 
+}
+
 .size-chip {
     padding: 10px 20px;
     background: transparent;
@@ -1194,7 +1228,13 @@ body {
 }
 
 /* الأزرار */
-.p-actions { display: flex; gap: 15px; align-items: center; margin-top: 40px; }
+.p-actions { 
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+    margin-top: 40px; 
+}
+
 .quantity {
     display: flex;
     border: 1px solid #444;
@@ -1244,8 +1284,14 @@ body {
     font-size: 14px;
 }
 
-.p-extra-info p { margin-bottom: 10px; }
-.p-extra-info i { color: #f2689e; margin-right: 10px; }
+.p-extra-info p { 
+    margin-bottom: 10px; 
+}
+
+.p-extra-info i { 
+    color: #f2689e; 
+    margin-right: 10px; 
+}
 
 /* تنسيق الـ Badge فوق الصورة الكبيرة */
 .main-image-holder {
@@ -1444,41 +1490,64 @@ h5{
 
 
 
+/* PAGE LAYOUT */
+.cart-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* left = items, right = checkout */
+  gap: 40px;
+  padding: 20px;
+}
+
+/* LEFT SIDE: ITEMS */
+.cart-items {
+  display: flex;
+  flex-direction: column; /* 🔥 THIS FIXES YOUR ISSUE */
+  gap: 20px;
+}
+
+
 .item {
   display: flex;
   align-items: center;
   gap: 15px;
   padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc;
 }
+
 
 .item img {
   width: 160px;
   height: 160px;
   object-fit: cover;
-  background: #fff;           
-  padding: 8px;              
-  border-radius: 10px;        
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 .details {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack name + price */
+  gap: 8px;
+  color: white;
 }
 
+
 .cash-box {
-  background:rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
   color: white;
   padding: 25px;
   border-radius: 18px;
-  width: 100%;
-  max-width: 420px;
-  margin-top: 25px;
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+
+  position: sticky;   /* 🔥 stays top right */
+  top: 20px;
+
+  height: fit-content;
 }
+
 
 .cash-box h3 {
   margin-bottom: 15px;
@@ -1488,7 +1557,6 @@ h5{
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: white;
 }
 
 .total {
@@ -1499,13 +1567,13 @@ h5{
   padding-top: 10px;
 }
 
+
 .checkout-btn {
   width: 100%;
   margin-top: 20px;
   padding: 12px;
   border: none;
   border-radius: 10px;
-
   background: black;
   color: white;
   font-size: 16px;
@@ -1515,6 +1583,7 @@ h5{
 .checkout-btn:hover {
   background: #333;
 }
+<<<<<<< HEAD
 /*perfume*/
 :root {
     --brand-pink: #f2689e;
@@ -1637,3 +1706,146 @@ body {
 
 
 
+=======
+
+
+/* SUGGESTIONS (FULL WIDTH BELOW) */
+.suggestion-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 40px; /* space for arrows */
+  overflow-x: hidden;
+
+
+}
+
+/* 🔥 THIS fixes them being side-by-side */
+.suggestion-card {
+  min-width: 180px;   /* prevents shrinking */
+  flex-shrink: 0;     /* keeps them in a row */
+  background:transparent;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* image styling */
+.suggestion-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.suggestions-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* left & right positions */
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+
+
+/*filter*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0; /* slide in from left */
+  background-color: var(--brand-dark);
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.3s;
+  border-left: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.sidebar label {
+  display: block;
+  margin: 10px;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--brand-pink);
+  text-decoration: none;
+}
+
+.products {
+  margin: 20px;
+}
+
+.product {
+  border: 1px solid #eee;
+  margin: 10px;
+  padding: 10px;
+}
+
+.sidebar h3{
+    margin-left: 10px;
+    color: var(--brand-pink);
+}
+
+.sidebar button{
+    margin-left: 10px;
+    border-color: var(--glass-border);
+    font-size: large;
+    background-color: var(--brand-pink);
+    cursor: pointer;
+    color: var(--brand-dark);
+    transition: all 0.4s;
+}
+
+.sidebar button:hover{
+    background-color: var(--brand-dark);
+    color: var(--brand-pink);
+}
+
+.filter_btn{
+    border-color: var(--glass-border);
+    font-size: large;
+    background-color: var(--brand-dark);
+    cursor: pointer;
+    color: var(--brand-pink);
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+
+.filter_btn:hover{
+    background-color: var(--brand-pink);
+    color: var(--brand-dark);
+}
+.checkout-btn:hover {
+  background: #333;
+}
+>>>>>>> b08be76b6bb12de67cf337f7a2bf770ec6432df6

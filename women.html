@@ -23,9 +23,9 @@
 
         <div class="nav-actions">
             <div class="search-box">
-                <input type="text" placeholder="Search...">
+                <input type="text" id="searchInput" placeholder="Search...">
             </div>
-          <a href="#" class="nav-icon">
+          <a href="wishlist.html" class="nav-icon">
                 <i class="fa-regular fa-heart"></i>
                 <span class="badge-count">2</span>
             </a>
@@ -38,6 +38,266 @@
             </a>
         </div>
     </nav>
+
+    <main class="product-page-content">
+        <button id="filterBtn" class="filter_btn"><i class="fa-solid fa-filter"></i>  Filter</button>
+            <div id="filterSidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+                <h3>Filter by Color</h3>
+                <label><input type="checkbox" name="color" value="Red"> Red</label>
+                <label><input type="checkbox" name="color" value="Blue"> Blue</label>
+                <label><input type="checkbox" name="color" value="Black"> Black</label>
+                <label><input type="checkbox" name="color" value="Grey"> Grey</label>
+                <label><input type="checkbox" name="color" value="White"> White</label>
+                <label><input type="checkbox" name="color" value="Brown"> Brown</label>
+                <label><input type="checkbox" name="color" value="Creamy"> Creamy</label>
+                <label><input type="checkbox" name="color" value="Burgandy"> Burgandy</label>
+
+                <h3>Filter by Category</h3>
+                <label><input type="checkbox" name="category" value="Dress"> Dresses</label>
+                <label><input type="checkbox" name="category" value="Top"> Tops/Shirts</label>
+                <label><input type="checkbox" name="category" value="Pants"> Pants</label>
+                <label><input type="checkbox" name="category" value="Sweatshirt"> Sweatshirts</label>
+                <label><input type="checkbox" name="category" value="Bag"> Bags</label>
+                <label><input type="checkbox" name="category" value="Shoes"> Shoes</label>
+                <label><input type="checkbox" name="category" value="Jacket"> Jackets</label>
+
+                <!-- Sliding Filter Panel -->
+                <h3>Price Range</h3>
+                <label>EGP 0 <input type="range" name="mychoice" id="mychoice" min="0" max="200000" value="200000"> EGP 200,000</label>
+                <button onclick="applyFilter()">Apply</button>
+            </div>
+
+            <div class="products-grid-container" id="productsGrid">
+                <div class="product-card" data-price="66404" data-color="Black" data-category="Shoes">
+                    <div class="product-badge">LIMITED</div>
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Gucci pumps.jpeg" alt="Black Gucci Pumps">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Donna Pumps-Gucci</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(36)</span>
+                        </div>
+                        <p class="product-price">EGP 66404</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="2590" data-color="White" data-category="Dress">
+                    <div class="product-badge">BESTSELLER</div>
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/White Summer Dress 2.jpg" alt="White Summer Zara Dress">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">White Halter Flare Summer Dress-Zara</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(26)</span>
+                        </div>
+                        <p class="product-price">EGP 2590</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="1299" data-color="Creamy" data-category="Top">
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Smocked blouse.avif" alt="Creamy H&M Smocked Blouse">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Creamy Smocked Blouse-H&M</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(24)</span>
+                        </div>
+                        <p class="product-price">EGP 1299</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="2290" data-color="Brown" data-category="Sweatshirt">
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/soft hooded sweatshirt.webp" alt="Soft Hooded Pull&Bear Sweatshirt ">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Brown Soft Hooded Sweatshirt-Pull&Bear</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(30)</span>
+                        </div>
+                        <p class="product-price">EGP 2290</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="1100" data-color="Creamy" data-category="Pants">
+                    <div class="product-badge sale">SALE</div>
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Pull-on twill trousers.avif" alt="Creamy Pull-on H&M Trousers">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Creamy Pull-on Twill Trousers-H&M</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(12)</span>
+                        </div>
+                        <div class="price-wrapper">
+                            <span class="price-old">EGP 2199</span>
+                            <span class="product-price">EGP 1100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="1290" data-color="Grey" data-category="Top">
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Gathered short sleeve.webp" alt="Grey Gathered Pull&Bear Short Sleeve Shirt ">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Grey Gathered Short Sleeve Shirt-Pull&Bear</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(23)</span>
+                        </div>
+                        <p class="product-price">EGP 1290</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="139751" data-color="Brown" data-category="Bag">
+                    <div class="product-badge">Hot</div>
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Gucci bag.jpeg" alt="Brown Gucci Shoulder Bag">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Brown Shoulder Bag-Gucci</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(38)</span>
+                        </div>
+                        <p class="product-price">EGP 139751</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="2000" data-color="Grey" data-category="Top">
+                    <div class="product-badge">NEW</div>
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Draped boat-neck top.avif" alt="Grey Draped Boat-Neck H&M Top">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Grey Draped Boat-Neck Top-H&M</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(31)</span>
+                        </div>
+                        <p class="product-price">EGP 2000</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="2590" data-color="Burgandy" data-category="Bag">
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Burgandy Bag.jpg" alt="Burgandy Zara Shoulder Bag">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Burgandy Shoulder Bag-Zara</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(29)</span>
+                        </div>
+                        <p class="product-price">EGP 2590</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-price="5266" data-color="White" data-category="Top">
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Boho blouse.webp" alt="White Boho Levi's Long Sleeve Blouse">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">White Boho Long Sleeve Blouse-Levi's</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(34)</span>
+                        </div>
+                        <p class="product-price">EGP 5266</p>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-price="5850" data-color="Black" data-category="Jacket">
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Puma Jacket.webp" alt="Black Puma Jacket">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Lace Woven Jacket-Puma</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(39)</span>
+                        </div>
+                        <p class="product-price">EGP 5850</p>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-price="3700" data-color="Black" data-category="Pants">
+                    <div class="product-badge sale">SALE</div>
+                    <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="images/Addidas track pants.avif" alt="Black Adicolor Addidas Track Pants">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Adicolor Classics Firebird Track Pants-Addidas</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(34)</span>
+                        </div>
+                         <div class="price-wrapper">
+                            <span class="price-old">EGP 5500</span>
+                            <span class="product-price">EGP 3700</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
     
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -65,5 +325,67 @@
             <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
+
+
+
+<script>
+const filterBtn = document.getElementById('filterBtn');
+const sidebar = document.getElementById('filterSidebar');
+const closeBtn = document.getElementById('closeBtn');
+const searchInput = document.getElementById('searchInput');
+const applyBtn = sidebar.querySelector('button'); // Apply button inside sidebar
+
+// Open sidebar
+filterBtn.addEventListener('click', () => {
+  sidebar.style.width = '300px';
+});
+
+// Close sidebar
+closeBtn.addEventListener('click', () => {
+  sidebar.style.width = '0';
+});
+
+// Filter products function
+function applyFilter() {
+    const maxPrice = parseInt(document.getElementById("mychoice").value) || Infinity;
+
+    const selectedColors = Array.from(document.querySelectorAll('input[name="color"]:checked'))
+        .map(cb => cb.value);
+
+    const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked'))
+        .map(cb => cb.value);
+
+    const products = document.querySelectorAll(".product-card"); // use correct class
+
+     const searchValue = searchInput.value.toLowerCase();
+
+    products.forEach(product => {
+        const price = parseInt(product.getAttribute("data-price")) || 0;
+        const color = product.getAttribute("data-color") || '';
+        const category = product.getAttribute("data-category") || '';
+        const productName = product.querySelector('.product-name').innerText.toLowerCase();
+
+        const matchPrice = price <= maxPrice;
+        const matchColor = selectedColors.length === 0 || selectedColors.includes(color);
+        const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+
+        const searchMatch = productName.includes(searchValue);
+
+        product.style.display = (matchPrice && matchColor && matchCategory && searchMatch) ? "block" : "none";
+    });
+}
+
+// Apply filter on checkbox change
+const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"]');
+checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
+
+// Apply filter when clicking Apply button
+applyBtn.addEventListener('click', applyFilter);
+
+// Apply filter on page load (optional: shows correct products based on default slider/checkbox)
+window.addEventListener('DOMContentLoaded', applyFilter);
+
+searchInput.addEventListener('input', applyFilter);
+</script>
 </body>
 </html>
