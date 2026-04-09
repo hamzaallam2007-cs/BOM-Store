@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Details - BOM</title>
+    <link rel="stylesheet" href="BOM.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="details-page">
+
+<nav class="navbar">
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo-img">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="perfume.html">Perfumes</a></li>
+        <li><a href="cosmetic.html">Cosmetics</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+<main class="product-container">
+
+    <!-- LEFT (IMAGES) -->
+    <div class="product-left">
+        <div class="main-image-holder">
+            <div class="item-badge">BEST SELLER</div>
+            <img src="images/arogate_pink.webp" id="mainImg">
+        </div>
+
+        <div class="small-images">
+            <img src="images/arogate_pink.webp" class="thumb active" onclick="changeImg(this.src)">
+            <img src="images/green ibraq.webp" class="thumb" onclick="changeImg(this.src)">
+            <img src="images/mexican tubacoo.webp" class="thumb" onclick="changeImg(this.src)">
+        </div>
+    </div>
+
+    <!-- RIGHT (DETAILS) -->
+    <div class="product-right">
+
+        <nav class="breadcrumb">Perfumes / Oud / Luxury</nav>
+
+        <h1 class="p-title">Arrogate Pink - Assaf</h1>
+
+        <div class="p-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>(120 Reviews)</span>
+        </div>
+
+        <p class="p-price">EGP 4500</p>
+
+        <p class="p-description">
+            A luxurious oriental fragrance with rich oud notes blended with floral hints.
+            Long-lasting scent perfect for special occasions.
+        </p>
+
+        <!-- SIZE = ML -->
+        <div class="p-options">
+            <h3>Select Size</h3>
+            <div class="size-chips">
+                <button class="size-chip">50 ML</button>
+                <button class="size-chip active">100 ML</button>
+                <button class="size-chip">150 ML</button>
+            </div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="p-actions">
+            <div class="quantity">
+                <button onclick="changeQty(-1)">-</button>
+                <input type="number" value="1" id="qty">
+                <button onclick="changeQty(1)">+</button>
+            </div>
+
+            <button class="add-to-cart-big">ADD TO CART</button>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="p-extra-info">
+            <p><i class="fa-solid fa-truck-fast"></i> Free Delivery over EGP 5000</p>
+            <p><i class="fa-solid fa-rotate-left"></i> 14 Days return policy</p>
+        </div>
+
+    </div>
+</main>
+
+<script>
+function changeImg(src) {
+    document.getElementById("mainImg").src = src;
+}
+
+function changeQty(val) {
+    let qty = document.getElementById("qty");
+    let newVal = parseInt(qty.value) + val;
+    if (newVal >= 1) qty.value = newVal;
+}
+</script>
+
+</body>
+</html>

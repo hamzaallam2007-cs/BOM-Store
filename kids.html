@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids</title>
+    <link rel="stylesheet" href="BOM.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="product-page">
+    
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="BOM-logo" class="logo-img">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="perfume.html">PERFUMES</a></li>
+            <li><a href="cosmetic.html">COSMETICS</a></li>
+            <li><a href="kids.html" class="active">KIDS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+            
+            <a href="#" class="nav-icon">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count">2</span>
+            </a>
+            
+            <a href="cart.html" class="nav-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge-count">5</span>
+            </a>
+            
+            <a href="account.html">
+                <button class="account-btn">My Account</button>
+            </a>
+        </div>
+    </nav>
+
+    <main class="product-page-content">
+        
+        <div class="filter-bar">
+            <div class="filter-section">
+                <select id="categoryFilter" class="sort-select">
+                    <option value="all">ALL KIDS</option>
+                    <option value="boys">BOYS</option>
+                    <option value="girls">GIRLS</option>
+                    <option value="unisex">UNISEX</option>
+                    <option value="baby">BABY</option>
+                </select>
+            </div>
+
+            <div class="sort-section">
+                <select id="priceFilter" class="sort-select">
+                    <option value="all">SORT BY PRICE</option>
+                    <option value="low">Under EGP 3000</option>
+                    <option value="mid">EGP 3000 - 8000</option>
+                    <option value="high">Above EGP 8000</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid-container" id="productsGrid">
+            
+            <!-- CARD 1 -->
+            <div class="product-card boys" data-price="1500">
+                <div class="product-badge">BEST SELLER</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids1.jpeg" alt="Product 1">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">matching Two-piece wear set beige</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(120)</span>
+                    </div>
+                    <p class="product-price">EGP 2500</p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="product-card girls" data-price="1200">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids2.jpeg" alt="Product 2">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">matching Two-piece wear set gray</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(85)</span>
+                    </div>
+                    <div class="price-wrapper">
+                        <span class="price-old">EGP 3000</span>
+                        <span class="product-price">EGP 1200</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="product-card unisex" data-price="900">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids3.jpeg" alt="Product 3">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Polo T-shirt</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(44)</span>
+                    </div>
+                    <p class="product-price">EGP 1500</p>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="product-card girls" data-price="2100">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids4.jpeg" alt="Product 4">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">set:T-shirt and polo shorts</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(67)</span>
+                    </div>
+                    <p class="product-price">EGP 2100</p>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="product-card boys" data-price="1800">
+                <div class="product-badge">BEST SELLER</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids5.jpeg" alt="Product 5">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Jeans set </h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(98)</span>
+                    </div>
+                    <p class="product-price">EGP 3800</p>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="product-card baby" data-price="750">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids6.jpeg" alt="Product 6">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">comfortable beige color matching set</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(53)</span>
+                    </div>
+                    <div class="price-wrapper">
+                        <span class="price-old">EGP 4000</span>
+                        <span class="product-price">EGP 2500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="product-card unisex" data-price="1350">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids7.jpeg" alt="Product 7">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">comfortable white color matching set</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(31)</span>
+                    </div>
+                    <p class="product-price">EGP 4800</p>
+                </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="product-card boys" data-price="2500">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids8.jpeg" alt="Product 8">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Beige jumpsuit for girls</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(76)</span>
+                    </div>
+                    <p class="product-price">EGP 2500</p>
+                </div>
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="product-card girls" data-price="1650">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids9.webp" alt="Product 9">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Beige dress decorated with roses</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(39)</span>
+                    </div>
+                    <p class="product-price">EGP 2900</p>
+                </div>
+            </div>
+
+            <!-- CARD 10 -->
+            <div class="product-card baby" data-price="600">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids10.webp" alt="Product 10">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">plain mint green dress</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(61)</span>
+                    </div>
+                    <div class="price-wrapper">
+                        <span class="price-old">EGP 2500</span>
+                        <span class="product-price">EGP 1900</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 11 -->
+            <div class="product-card unisex" data-price="3200">
+                <div class="product-badge">BEST SELLER</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids11.webp" alt="Product 11">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">pink dress</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(112)</span>
+                    </div>
+                    <p class="product-price">EGP 3200</p>
+                </div>
+            </div>
+
+            <!-- CARD 12 -->
+            <div class="product-card baby" data-price="850">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/kids12.webp" alt="Product 12">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">pajamas for baby boys</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(48)</span>
+                    </div>
+                    <p class="product-price">EGP 950</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

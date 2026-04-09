@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM LUXE | Perfumes</title>
+    <link rel="stylesheet" href="BOM.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="product-page">
+    
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="BOM-logo" class="logo-img">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="perfume.html" class="active">PERFUMES</a></li>
+            <li><a href="cosmetic.html">COSMETICS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+            
+            <a href="#" class="nav-icon">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count">2</span>
+            </a>
+            
+            <a href="cart.html" class="nav-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge-count">5</span>
+            </a>
+            
+            <a href="account.html">
+                <button class="account-btn">My Account</button>
+            </a>
+        </div>
+    </nav>
+
+    <main class="product-page-content">
+        
+        <div class="filter-bar">
+            <div class="filter-section">
+                <select id="categoryFilter" class="sort-select">
+                    <option value="all">ALL FRAGRANCES</option>
+                    <option value="oud">OUD & ORIENTAL</option>
+                    <option value="floral">FLORAL</option>
+                    <option value="musk">MUSK</option>
+                    <option value="woody">WOODY</option>
+                </select>
+            </div>
+
+            <div class="sort-section">
+                <select id="priceFilter" class="sort-select">
+                    <option value="all">SORT BY PRICE</option>
+                    <option value="low">Under EGP 3000</option>
+                    <option value="mid">EGP 3000 - 8000</option>
+                    <option value="high">Above EGP 8000</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid-container" id="productsGrid">
+            
+            <!-- CARD 1 -->
+            <div class="product-card oud" data-price="4500">
+                <div class="product-badge">BEST SELLER</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/arogate_pink.webp" alt="Midnight Oud">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Arrogate pink from assaf</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(120)</span>
+                    </div>
+                    <p class="product-price">EGP 4500</p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="product-card oud" data-price="2900">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/green ibraq.webp" alt="Golden Essence">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">emerald soul diamond from ibraq</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(85)</span>
+                    </div>
+                    <div class="price-wrapper">
+                        <span class="price-old">EGP 3800</span>
+                        <span class="product-price">EGP 2900</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="product-card musk" data-price="2100">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/mexican tubacoo.webp" alt="Crystal Pure">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">mexican tobacco from ibraq</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(44)</span>
+                    </div>
+                    <p class="product-price">EGP 2500</p>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="product-card floral" data-price="3200">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/msk ibraq.webp" alt="Velvet Rose">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">musk al shams from ibraq</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(67)</span>
+                    </div>
+                    <p class="product-price">EGP 3200</p>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="product-card woody" data-price="5800">
+                <div class="product-badge">BEST SELLER</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/msk2ibraq.webp" alt="Dark Cedar">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">musk al boder from ibraq</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(98)</span>
+                    </div>
+                    <p class="product-price">EGP 2800</p>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="product-card floral" data-price="2600">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/noude ibraq.webp" alt="Bloom Essence">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">nude coral diamond from ibraq</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(53)</span>
+                    </div>
+                    <div class="price-wrapper">
+                        <span class="price-old">EGP 3400</span>
+                        <span class="product-price">EGP 2600</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="product-card musk" data-price="9200">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/ssss.webp" alt="Royal Musk">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">sauvage dior</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(31)</span>
+                    </div>
+                    <p class="product-price">EGP 9200</p>
+                </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="product-card oud" data-price="7500">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/versache.webp" alt="Amber Oud">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">versace pour homme</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(76)</span>
+                    </div>
+                    <p class="product-price">EGP 7500</p>
+                </div>
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="product-card woody" data-price="3600">
+                <div class="product-badge">NEW</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/oud.jpg" alt="Sandalwood Dusk">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">bellavita oud parfum</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(39)</span>
+                    </div>
+                    <p class="product-price">EGP 3600</p>
+                </div>
+            </div>
+
+            <!-- CARD 10 -->
+            <div class="product-card floral" data-price="2750">
+                <div class="product-badge sale">SALE</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/stronger.webp" alt="Jasmine Noir">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">stronger with you </h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(61)</span>
+                    </div>
+                    <div class="price-wrapper">
+                        <span class="price-old">EGP 5500</span>
+                        <span class="product-price">EGP 3750</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 11 -->
+            <div class="product-card oud" data-price="8900">
+                <div class="product-badge">BEST SELLER</div>
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/saspiro.webp" alt="Black Oud Emperor">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">sispiro il padrino</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(112)</span>
+                    </div>
+                    <p class="product-price">EGP 8900</p>
+                </div>
+            </div>
+
+            <!-- CARD 12 -->
+            <div class="product-card musk" data-price="1950">
+                <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="product-img-holder">
+                    <img src="images/jadore.webp" alt="Soft Musk Blanche">
+                    <div class="quick-add-overlay">
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">jadore dior</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(48)</span>
+                    </div>
+                    <p class="product-price">EGP 5950</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
