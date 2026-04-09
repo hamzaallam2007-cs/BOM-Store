@@ -1136,8 +1136,14 @@ body {
     padding: 20px;
 }
 
-.product-left { flex: 1.2; }
-.product-right { flex: 1; color: white; }
+.product-left { 
+    flex: 1.2; 
+}
+
+.product-right { 
+    flex: 1; 
+    color: white; 
+}
 
 .main-image-holder {
     background: #1a1a1a;
@@ -1172,13 +1178,41 @@ body {
 }
 
 /* تفاصيل الكتابة */
-.breadcrumb { color: #888; font-size: 14px; margin-bottom: 10px; }
-.p-title { font-size: 32px; margin-bottom: 10px; }
-.p-price { font-size: 24px; color: #f2689e; font-weight: bold; margin: 20px 0; }
-.p-description { color: #ccc; line-height: 1.6; margin-bottom: 30px; }
+.breadcrumb { 
+    color: #888; 
+    font-size: 14px; 
+    margin-bottom: 10px; 
+}
+
+.p-title { 
+    font-size: 32px; 
+    margin-bottom: 10px; 
+}
+
+.p-price { 
+    font-size: 24px; 
+    color: #f2689e; 
+    font-weight: bold; 
+    margin: 20px 0; 
+}
+
+.p-description { 
+    color: #ccc; 
+    line-height: 1.6; 
+    margin-bottom: 30px; 
+}
+
+.p-rating i{
+    color: yellow;
+}
 
 /* المقاسات */
-.size-chips { display: flex; gap: 10px; margin-top: 10px; }
+.size-chips { 
+    display: flex; 
+    gap: 10px; 
+    margin-top: 10px; 
+}
+
 .size-chip {
     padding: 10px 20px;
     background: transparent;
@@ -1194,7 +1228,13 @@ body {
 }
 
 /* الأزرار */
-.p-actions { display: flex; gap: 15px; align-items: center; margin-top: 40px; }
+.p-actions { 
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+    margin-top: 40px; 
+}
+
 .quantity {
     display: flex;
     border: 1px solid #444;
@@ -1244,8 +1284,14 @@ body {
     font-size: 14px;
 }
 
-.p-extra-info p { margin-bottom: 10px; }
-.p-extra-info i { color: #f2689e; margin-right: 10px; }
+.p-extra-info p { 
+    margin-bottom: 10px; 
+}
+
+.p-extra-info i { 
+    color: #f2689e; 
+    margin-right: 10px; 
+}
 
 /* تنسيق الـ Badge فوق الصورة الكبيرة */
 .main-image-holder {
