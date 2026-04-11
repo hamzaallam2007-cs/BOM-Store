@@ -1480,12 +1480,12 @@ h5{
 
 .user {
   text-align: right;
-  color: blue;
+  color: var(--brand-pink);
 }
 
 .bot {
   text-align: left;
-  color: green;
+  color: var(--brand-blue);
 }
 
 
@@ -1541,13 +1541,14 @@ h5{
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-
   position: sticky;   /* 🔥 stays top right */
   top: 20px;
-
   height: fit-content;
 }
 
+.cash-box h3{
+    padding-bottom: 5%;
+}
 
 .checkout-form {
   display: flex;
@@ -1563,7 +1564,7 @@ h5{
   padding: 12px;
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.2);
-  background: transparent;
+  background: var(--brand-dark);
   color: white;
   font-size: 14px;
 }
@@ -1599,9 +1600,9 @@ h5{
 }
 
 .checkout-btn:hover {
-  background: #e5e5e5;
+  background: black;
+  color: white;
 }
-
 
 /* SUGGESTIONS (FULL WIDTH BELOW) */
 .suggestion-list {
@@ -1739,7 +1740,5 @@ h5{
     background-color: var(--brand-pink);
     color: var(--brand-dark);
 }
-.checkout-btn:hover {
-  background: #333;
-}
+
 
