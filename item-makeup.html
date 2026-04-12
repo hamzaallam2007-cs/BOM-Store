@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matte Lipstick - BOM Store</title>
+
+    <link rel="stylesheet" href="BOM.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="details-page">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo-img">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="clothing.html">Clothes</a></li>
+        <li><a href="cosmetics.html">Cosmetics</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+
+    <div class="nav-actions">
+        <input type="text" placeholder="Search...">
+    </div>
+
+</nav>
+
+<br>
+
+<!-- PRODUCT PAGE -->
+<main class="product-container">
+
+    <!-- LEFT SIDE -->
+    <div class="product-left">
+        <div class="main-image-holder">
+    <img src="images/lip3.webp" id="mainImg" alt="lipstick">
+</div>
+
+        <!-- THUMBNAILS -->
+        <div class="small-images">
+
+            <img src="images/lip3.webp" class="thumb active" onclick="changeImg(this.src)">
+            <img src="images/lip1.webp" class="thumb" onclick="changeImg(this.src)">
+            <img src="images/lip2.jpg" class="thumb" onclick="changeImg(this.src)">
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="product-right">
+        
+
+        <h1 class="p-title">Matte Lipstick</h1>
+
+        <p class="p-price">EGP 300</p>
+
+        <p class="p-description">
+            Smooth matte lipstick with soft finish and long lasting color 💄
+        </p>
+
+        <!-- SELECT SHADE -->
+        <div class="p-options">
+
+            <h3>Select Shade</h3>
+
+            <div class="size-chips">
+
+                <button class="size-chip active" onclick="changeShade('pink')">Pink</button>
+                <button class="size-chip" onclick="changeShade('nude')">Nude</button>
+                <button class="size-chip" onclick="changeShade('red')">Red</button>
+
+            </div>
+
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="p-actions">
+
+            <div class="quantity">
+                <button onclick="changeQty(-1)">-</button>
+                <input type="number" value="1" id="qty">
+                <button onclick="changeQty(1)">+</button>
+            </div>
+
+            <button class="add-to-cart-big">ADD TO CART</button>
+
+        </div>
+        <div class="p-extra-info">
+
+    <p><i class="fa-solid fa-truck-fast"></i> Free Delivery on orders over EGP 5000</p>
+
+    <p><i class="fa-solid fa-rotate-left"></i> 14 Days Return Policy</p>
+
+</div>
+
+    </div>
+
+</main>
+
+<!-- SCRIPT -->
+<script>
+
+// change main image (thumbnails)
+function changeImg(src){
+    document.getElementById("mainImg").src = src;
+}
+
+// change shade
+function changeShade(color){
+
+    const img = document.getElementById("mainImg");
+
+    if(color === "pink"){
+        img.src = "images/lip3.webp";
+    }
+    else if(color === "nude"){
+        img.src = "images/lip1.webp";
+    }
+    else if(color === "red"){
+        img.src = "images/lip2.jpg";
+    }
+
+}
+
+// quantity
+function changeQty(val){
+    let qty = document.getElementById("qty");
+    let newVal = parseInt(qty.value) + val;
+    if(newVal >= 1){
+        qty.value = newVal;
+    }
+}
+
+</script>
+
+</body>
+</html>
