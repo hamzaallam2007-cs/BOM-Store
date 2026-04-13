@@ -114,47 +114,6 @@
         </div>
     </footer>
 
-    <script>
-function toggleChat() {
-  let box = document.getElementById("chatBox");
-  box.style.display = box.style.display === "flex" ? "none" : "flex";
-}
-
-function sendMessage() {
-  let input = document.getElementById("input");
-  let messages = document.getElementById("messages");
-
-  if (input.value.trim() === "") return;
-
-  // User message
-  let userMsg = document.createElement("div");
-  userMsg.className = "message user";
-  userMsg.innerText = input.value;
-  messages.appendChild(userMsg);
-
-  // Fake bot reply
-  let botMsg = document.createElement("div");
-  botMsg.className = "message bot";
-
-  if (input.value.toLowerCase().includes("price")) {
-    botMsg.innerText = "Our prices start from EGP900.";
-  } else if (input.value.toLowerCase().includes("shirt size")) {
-    botMsg.innerText = "We have sizes from S to XL for adults and from 6 to 16 for kids.";
-  }  else if (input.value.toLowerCase().includes("shoe size")) {
-    botMsg.innerText = "We have sizes from 36 to 44.";
-  } else if (input.value.toLowerCase().includes("size")){
-    botMsg.innerText = "We have sizes from 36 to 44 for shoes, sizes from S to XL for adults and from 6 to 16 for kids.";
-  }else {
-    botMsg.innerText = "Thanks! We'll get back to you soon.";
-  }
-
-  setTimeout(() => {
-    messages.appendChild(botMsg);
-    messages.scrollTop = messages.scrollHeight;
-  }, 500);
-
-  input.value = "";
-}
-</script>
+<script src="BOM.js"></script>
 </body>
 </html>

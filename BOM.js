@@ -110,3 +110,107 @@ function changeQty(val) {
     let newVal = parseInt(qty.value) + val;
     if (newVal >= 1) qty.value = newVal;
 }
+
+/*Women*/
+
+//Filter 
+const filterBtn = document.getElementById('filterBtn');
+const sidebar = document.getElementById('filterSidebar');
+const closeBtn = document.getElementById('closeBtn');
+const searchinput = document.getElementById('searchInput');
+const applyBtn = sidebar.querySelector('button'); // Apply button inside sidebar
+
+// Open sidebar
+filterBtn.addEventListener('click', () => {
+  sidebar.style.width = '300px';
+});
+
+// Close sidebar
+closeBtn.addEventListener('click', () => {
+  sidebar.style.width = '0';
+});
+
+// Filter products function
+function applyFilter() {
+    const maxPrice = parseInt(document.getElementById("mychoice").value) || Infinity;
+
+    const selectedColors = Array.from(document.querySelectorAll('input[name="color"]:checked'))
+        .map(cb => cb.value);
+
+    const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked'))
+        .map(cb => cb.value);
+
+    const products = document.querySelectorAll(".product-card"); // use correct class
+
+     const searchValue = searchInput.value.toLowerCase();
+
+    products.forEach(product => {
+        const price = parseInt(product.getAttribute("data-price")) || 0;
+        const color = product.getAttribute("data-color") || '';
+        const category = product.getAttribute("data-category") || '';
+        const productName = product.querySelector('.product-name').innerText.toLowerCase();
+
+        const matchPrice = price <= maxPrice;
+        const matchColor = selectedColors.length === 0 || selectedColors.includes(color);
+        const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+
+        const searchMatch = productName.includes(searchValue);
+
+        product.style.display = (matchPrice && matchColor && matchCategory && searchMatch) ? "block" : "none";
+    });
+}
+
+// Apply filter on checkbox change
+const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"]');
+checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
+
+// Apply filter when clicking Apply button
+applyBtn.addEventListener('click', applyFilter);
+
+// Apply filter on page load (optional: shows correct products based on default slider/checkbox)
+window.addEventListener('DOMContentLoaded', applyFilter);
+
+searchinput.addEventListener('input', applyFilter);
+
+/*Contact*/
+
+function toggleChat() {
+  let box = document.getElementById("chatBox");
+  box.style.display = box.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  let input = document.getElementById("input");
+  let messages = document.getElementById("messages");
+
+  if (input.value.trim() === "") return;
+
+  // User message
+  let userMsg = document.createElement("div");
+  userMsg.className = "message user";
+  userMsg.innerText = input.value;
+  messages.appendChild(userMsg);
+
+  // Fake bot reply
+  let botMsg = document.createElement("div");
+  botMsg.className = "message bot";
+
+  if (input.value.toLowerCase().includes("price")) {
+    botMsg.innerText = "Our prices start from EGP900.";
+  } else if (input.value.toLowerCase().includes("shirt size")) {
+    botMsg.innerText = "We have sizes from S to XL for adults and from 6 to 16 for kids.";
+  }  else if (input.value.toLowerCase().includes("shoe size")) {
+    botMsg.innerText = "We have sizes from 36 to 44.";
+  } else if (input.value.toLowerCase().includes("size")){
+    botMsg.innerText = "We have sizes from 36 to 44 for shoes, sizes from S to XL for adults and from 6 to 16 for kids.";
+  }else {
+    botMsg.innerText = "Thanks! We'll get back to you soon.";
+  }
+
+  setTimeout(() => {
+    messages.appendChild(botMsg);
+    messages.scrollTop = messages.scrollHeight;
+  }, 500);
+
+  input.value = "";
+}
