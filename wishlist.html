@@ -1,117 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOM store-Wishlist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="BOM.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishlist - BOM Store</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="BOM.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<style>
+.product-image { position: relative; }
+
+.wishlist-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.wishlist-heart.active i {
+    color: red;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+</style>
 </head>
-<body class="product-page">
-    <nav class="navbar">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="BOM Logo" class="logo-img">
-        </div>
 
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="clothing.html">Clothes</a>
-            <a href="cosmetic.html">Cosmetics</a>
-            <a href="about.html">About</a>
-        </div>
+<body>
 
-        <div class="nav-actions">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search...">
-            </div>
-          <a href="wishlist.html" class="nav-icon">
-                <i class="fa-regular fa-heart"></i>
-                <span class="badge-count">2</span>
-            </a>
-           <a href="cart.html" class="nav-icon">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="badge-count">5</span>
-            </a>
-            <a href="account.html">
-            <button class="account-btn">My Account</button>
-            </a>
-        </div>
-    </nav>
-
-<section class="wishlist-section">
-    <h1>My Wishlist</h1>
-
-    <div class="product-grid">
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Black Nike-Hoodie.jpeg" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Black Nike Hoodie</h3>
-                <p>EGP 3200</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Blue Nike - Shorts.jpeg" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Blue Nike Shorts</h3>
-                <p>EGP 3050</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Grey-Linen Pullover Shirt.jpeg" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Grey Linen Pullover</h3>
-                <p>EGP 2700</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Maryland-Zip Up-Sweatshirt.webp" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Maryland Zip-Up</h3>
-                <p>EGP 2150</p>
-            </div>
-        </div>
-
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo-img">
     </div>
+
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="clothing.html">Clothes</a></li>
+        <li><a href="cosmetic.html">Cosmetics</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+
+    <div class="nav-actions">
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <a class="nav-icon">
+            <i class="fa-solid fa-heart"></i>
+            <span id="wishlist-count">3</span>
+        </a>
+
+        <a class="nav-icon">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+</nav>
+
+<header class="main-title">
+    <h1>My Wishlist</h1>
+</header>
+
+<!-- ================= WISHLIST ================= -->
+<section class="wishlist-section">
+<div class="product-grid" id="wishlist-container">
+
+<!-- Hoodie -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="sale-badge">SALE</span>
+        <span class="price-tag">EGP 3200</span>
+        <img src="images/Black Nike-Hoodie.jpeg">
+    </div>
+    <div class="product-info">
+        <h3>Black Nike Hoodie</h3>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- Top -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="price-tag">EGP 1100</span>
+        <img src="images/Black-basic top.jpeg">
+    </div>
+    <div class="product-info">
+        <h3>Black Basic Top</h3>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- Arrogate Pink -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="price-tag">EGP 4500</span>
+        <img src="images/arrogate pink.jpg">
+    </div>
+    <div class="product-info">
+        <h3>Arrogate Pink from Assaf</h3>
+        <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>(120)</span>
+        </div>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+</div>
 </section>
 
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-column">
-                <h3>About BOM</h3>
-                <p>BOM Store is your destination for trends. Quality and style in one place.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Help</h3>
-                <ul><li><a href="contact.html">Contact Us</a></li></ul>
-                <ul><li><a href="about.html">About Us</a></li></ul>
+<!-- ================= SUGGESTIONS ================= -->
+<section class="wishlist-section">
+<h1 style="margin-top:40px;">Suggestions</h1>
 
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="men.html">Men's Collection</a></li>
-                    <li><a href="women.html">Women's Collection</a></li>
-                    <li><a href="kids.html">Kids' Collection</a></li>
-                </ul>
-            </div>
+<div class="product-grid">
+
+<!-- Linen -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="sale-badge">NEW</span>
+        <span class="price-tag">EGP 2700</span>
+        <img src="images/Grey-Linen Pullover Shirt.jpeg">
+    </div>
+    <div class="product-info">
+        <h3>Grey Linen Pullover</h3>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
         </div>
-        <div class="footer-bottom">
-            <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
+    </div>
+</div>
+
+<!-- Maryland -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="price-tag">EGP 2150</span>
+        <img src="images/Maryland-Zip Up-Sweatshirt.webp">
+    </div>
+    <div class="product-info">
+        <h3>Maryland Zip-Up</h3>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
         </div>
-    </footer>
+    </div>
+</div>
+
+<!-- Pink Blush -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="price-tag">EGP 610</span>
+        <img src="images/pink blush.jpg">
+    </div>
+    <div class="product-info">
+        <h3>Soft Pink Blush</h3>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- White Dress -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="sale-badge">NEW</span>
+        <span class="price-tag">EGP 3200</span>
+        <img src="images/White Summer Dress 2.jpg">
+    </div>
+    <div class="product-info">
+        <h3>White Summer Dress</h3>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- Air Jordan -->
+<div class="product-card">
+    <div class="product-image">
+        <button class="wishlist-heart"><i class="fa-regular fa-heart"></i></button>
+        <span class="sale-badge">HOT</span>
+        <span class="price-tag">EGP 5200</span>
+        <img src="images/grey nike air jordan.jpg">
+    </div>
+    <div class="product-info">
+        <h3>Grey Air Jordan</h3>
+        <div class="wishlist-actions">
+            <button class="add-cart">Add to Cart</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<p style="text-align:center;">© 2026 BOM STORE</p>
+</footer>
+
+<!-- ================= JS FIXED ================= -->
+<script>
+let cartCount = 0;
+
+document.addEventListener("click", function(e) {
+
+    if (e.target.closest(".wishlist-heart")) {
+        e.target.closest(".wishlist-heart").classList.toggle("active");
+    }
+
+    if (e.target.closest(".remove-item")) {
+        e.target.closest(".product-card").remove();
+    }
+
+    if (e.target.closest(".add-cart")) {
+        cartCount++;
+        document.getElementById("cart-count").textContent = cartCount;
+        localStorage.setItem("cartCount", cartCount);
+    }
+});
+
+window.onload = () => {
+    cartCount = localStorage.getItem("cartCount") || 0;
+    document.getElementById("cart-count").textContent = cartCount;
+};
+</script>
 
 </body>
 </html>
