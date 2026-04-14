@@ -26,17 +26,14 @@
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="Search...">
             </div>
-            
             <a href="wishlist.html" class="nav-icon">
                 <i class="fa-regular fa-heart"></i>
                 <span class="badge-count">2</span>
             </a>
-            
             <a href="cart.html" class="nav-icon">
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span class="badge-count">5</span>
             </a>
-            
             <a href="account.html">
                 <button class="account-btn">My Account</button>
             </a>
@@ -56,7 +53,6 @@
                     <option value="jeans">JEANS</option>
                 </select>
             </div>
-
             <div class="sort-section">
                 <select id="priceFilter" class="sort-select">
                     <option value="all">SORT BY PRICE</option>
@@ -66,10 +62,9 @@
                 </select>
             </div>
         </div>
-        
 
         <div class="products-grid-container" id="productsGrid">
-    
+            
             <div class="product-card hoodie" data-price="1430">
                 <div class="product-badge">NEW</div>
                 <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
@@ -123,25 +118,25 @@
                         <span>(42)</span>
                     </div>
                     <div class="price-wrapper">
-                    <span class="price-old">EGP 4200</span>
-                    <span class="product-price">EGP 3100</span>
+                        <span class="price-old">EGP 4200</span>
+                        <span class="product-price">EGP 3100</span>
                     </div>
                 </div>
             </div>
-        
+
             <div class="product-card shoes" data-price="14000">
                 <div class="product-badge">LIMITED</div>
                 <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
-               <a href="item-men.html" class="product-link">
                 <div class="product-img-holder">
-                    <img src="images/grey nike air jordan.jpg" alt="Nike shoes">
-                    <div class="quick-add-overlay">
-                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
-                    </div>
-                </a>
+                    <a href="item-men.html" class="product-link">
+                        <img src="images/grey nike air jordan.jpg" alt="Nike shoes">
+                        <div class="quick-add-overlay">
+                            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                        </div>
+                    </a>
                 </div>
                 <div class="product-info">
-                 <h3 class="product-name">Grey Air Jordan-Nike</h3>
+                    <h3 class="product-name">Grey Air Jordan-Nike</h3>
                     <div class="product-rating">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         <span>(150)</span>
@@ -221,8 +216,8 @@
                         <span>(12)</span>
                     </div>
                     <div class="price-wrapper">
-                    <span class="price-old">EGP 4000</span>
-                    <span class="product-price">EGP 3650</span>
+                        <span class="price-old">EGP 4000</span>
+                        <span class="product-price">EGP 3650</span>
                     </div>
                 </div>
             </div>
@@ -280,8 +275,8 @@
                         <span>(10)</span>
                     </div>
                     <div class="price-wrapper">
-                    <span class="price-old">EGP 13999</span>
-                    <span class="product-price">EGP 12000</span>
+                        <span class="price-old">EGP 13999</span>
+                        <span class="product-price">EGP 12000</span>
                     </div>
                 </div>
             </div>
@@ -303,6 +298,7 @@
                     </div>
                     <p class="product-price">EGP 3100</p>
                 </div>
+            </div>
         </div>
     </main>
 
@@ -332,47 +328,6 @@
             <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
-
-    <script>
-        const categoryFilter = document.getElementById('categoryFilter');
-        const priceFilter = document.getElementById('priceFilter');
-        const searchInput = document.getElementById('searchInput');
-        const products = document.querySelectorAll('.product-card');
-
-        function filterProducts() {
-            const categoryValue = categoryFilter.value;
-            const priceValue = priceFilter.value;
-            const searchValue = searchInput.value.toLowerCase();
-
-            products.forEach(product => {
-                const productCategory = product.classList.contains(categoryValue) || categoryValue === 'all';
-                const productPrice = parseInt(product.getAttribute('data-price'));
-                const productName = product.querySelector('.product-name').innerText.toLowerCase();
-                
-                // فلتر السعر
-                let priceMatch = false;
-                if (priceValue === 'all') priceMatch = true;
-                else if (priceValue === 'low' && productPrice < 3000) priceMatch = true;
-                else if (priceValue === 'mid' && productPrice >= 3000 && productPrice <= 8000) priceMatch = true;
-                else if (priceValue === 'high' && productPrice > 8000) priceMatch = true;
-
-                // فلتر البحث بالاسم
-                const searchMatch = productName.includes(searchValue);
-
-                // التنفيذ: لو كله تمام اظهر المنتج
-                if (productCategory && priceMatch && searchMatch) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
-
-        // تشغيل الفلتر أول ما نغير أي حاجة
-        categoryFilter.addEventListener('change', filterProducts);
-        priceFilter.addEventListener('change', filterProducts);
-        searchInput.addEventListener('input', filterProducts);
-    </script>
-
+    <script src="BOM.js"></script>
 </body>
 </html>
