@@ -23,7 +23,7 @@
 
         <div class="nav-actions">
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search...">
+                <input type="text" id="searchinput" placeholder="Search...">
             </div>
           <a href="wishlist.html" class="nav-icon">
                 <i class="fa-regular fa-heart"></i>
@@ -43,7 +43,7 @@
         <button id="filterBtn" class="filter_btn"><i class="fa-solid fa-filter"></i>  Filter</button>
             <div id="filterSidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
-                <h3>Filter by Color</h3>
+                <h3 class="margin-top">Filter by Color</h3>
                 <label><input type="checkbox" name="color" value="Red"> Red</label>
                 <label><input type="checkbox" name="color" value="Blue"> Blue</label>
                 <label><input type="checkbox" name="color" value="Black"> Black</label>
@@ -65,7 +65,7 @@
                 <!-- Sliding Filter Panel -->
                 <h3>Price Range</h3>
                 <label>EGP 0 <input type="range" name="mychoice" id="mychoice" min="0" max="200000" value="200000"> EGP 200,000</label>
-                <button onclick="applyFilter()">Apply</button>
+                <button id="applyBtn">Apply</button>
             </div>
 
             <div class="products-grid-container" id="productsGrid">
@@ -327,9 +327,7 @@
             <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
-
-
-
-<script src="BOM.js"></script>
+<script src="BOM.js">
+</script>
 </body>
 </html>

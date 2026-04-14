@@ -46,9 +46,17 @@ function filterProducts() {
 }
 
 // إضافة المستمعات (Event Listeners) لتشغيل الفلتر عند كل تغيير
-categoryFilter.addEventListener('change', filterProducts);
-priceFilter.addEventListener('change', filterProducts);
-searchInput.addEventListener('input', filterProducts);
+if (categoryFilter) {
+    categoryFilter.addEventListener('change', filterProducts);
+}
+
+if (priceFilter) {
+    priceFilter.addEventListener('change', filterProducts);
+}
+
+if (searchInput) {
+    searchInput.addEventListener('input', filterProducts);
+}
 
 
 /*item men*/
@@ -114,24 +122,27 @@ function changeQty(val) {
 /*Women*/
 
 //Filter 
-const filterBtn = document.getElementById('filterBtn');
-const sidebar = document.getElementById('filterSidebar');
-const closeBtn = document.getElementById('closeBtn');
-const searchinput = document.getElementById('searchInput');
-const applyBtn = sidebar.querySelector('button'); // Apply button inside sidebar
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("i");
+  const filterBtn = document.getElementById('filterBtn');
+  const sidebar = document.getElementById('filterSidebar');
+  const closeBtn = document.getElementById('closeBtn');
+  const searchinput = document.getElementById('searchinput');
+  const applyBtn = document.getElementById('applyBtn');
 
-// Open sidebar
-filterBtn.addEventListener('click', () => {
-  sidebar.style.width = '300px';
-});
+  // Open
+  filterBtn.addEventListener('click', () => {
+    console.log("Filter button clicked"); // debug
+    sidebar.style.width = '300px';
+  });
 
-// Close sidebar
-closeBtn.addEventListener('click', () => {
-  sidebar.style.width = '0';
-});
+  // Close
+  closeBtn.addEventListener('click', () => {
+    sidebar.style.width = '0';
+  });
 
-// Filter products function
-function applyFilter() {
+  // Filter products function
+  function applyFilter() {
     const maxPrice = parseInt(document.getElementById("mychoice").value) || Infinity;
 
     const selectedColors = Array.from(document.querySelectorAll('input[name="color"]:checked'))
@@ -140,37 +151,37 @@ function applyFilter() {
     const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked'))
         .map(cb => cb.value);
 
-    const products = document.querySelectorAll(".product-card"); // use correct class
-
-     const searchValue = searchInput.value.toLowerCase();
+    const products = document.querySelectorAll(".product-card");
+    const searchValue = searchinput.value.toLowerCase();
 
     products.forEach(product => {
-        const price = parseInt(product.getAttribute("data-price")) || 0;
-        const color = product.getAttribute("data-color") || '';
-        const category = product.getAttribute("data-category") || '';
-        const productName = product.querySelector('.product-name').innerText.toLowerCase();
+      const price = parseInt(product.getAttribute("data-price")) || 0;
+      const color = product.getAttribute("data-color") || '';
+      const category = product.getAttribute("data-category") || '';
+      const productName = product.querySelector('.product-name').innerText.toLowerCase();
+      const matchPrice = price <= maxPrice;
+      const matchColor = selectedColors.length === 0 || selectedColors.includes(color);
+      const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+      const searchMatch = productName.includes(searchValue);
 
-        const matchPrice = price <= maxPrice;
-        const matchColor = selectedColors.length === 0 || selectedColors.includes(color);
-        const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
-
-        const searchMatch = productName.includes(searchValue);
-
-        product.style.display = (matchPrice && matchColor && matchCategory && searchMatch) ? "block" : "none";
+      product.style.display = (matchPrice && matchColor && matchCategory && searchMatch) ? "block" : "none";
     });
-}
+  }
 
-// Apply filter on checkbox change
-const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"]');
-checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
+  // Apply filter on checkbox change
+  const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"]');
+  checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
 
-// Apply filter when clicking Apply button
-applyBtn.addEventListener('click', applyFilter);
+  // Apply filter when clicking Apply button
+  applyBtn.addEventListener('click', applyFilter);
 
-// Apply filter on page load (optional: shows correct products based on default slider/checkbox)
-window.addEventListener('DOMContentLoaded', applyFilter);
+  // Apply filter on page load
+  applyFilter();
 
-searchinput.addEventListener('input', applyFilter);
+  // Apply filter on search input
+  searchinput.addEventListener('input', applyFilter);
+});
+
 
 /*Contact*/
 
