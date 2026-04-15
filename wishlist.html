@@ -8,59 +8,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="BOM.css">
 <link rel="icon" type="image/png" href="images/logo.png">
-
-<style>
-.product-image { position: relative; }
-
-.wishlist-heart {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: white;
-    border: none;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.add-cart,
-.remove-item {
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-}
-
-.price-tag {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: black;
-    color: white;
-    padding: 5px 10px;
-    font-size: 13px;
-    border-radius: 5px;
-}
-.suggestion-card {
-  position: relative;
-}
-
-.heart-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 22px;
-  color: white;
-  cursor: pointer;
-}
-
-.heart-btn.active {
-  color: red;
-}
 </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
         <div class="logo-container">
             <img src="images/logo.png" alt="BOM Logo" class="logo-img">
@@ -94,7 +45,7 @@
     <h1>My Wishlist</h1>
 </header>
 
-<!-- ================= WISHLIST ================= -->
+
 <section class="wishlist-section">
 <div class="product-grid" id="wishlist-container">
  <div class="product-grid">
@@ -138,20 +89,15 @@
 </div>
 </section>
 
-<!-- ================= SUGGESTIONS ================= -->
 <section class="wishlist-section">
 <h1>Suggestions</h1>
 
 <div class="product-grid">
-    
-
-<!-- Linen -->
-
+   
 <div class="suggestions">
 
   <div class="suggestions-wrapper">
     
-    <!-- LEFT ARROW -->
     <div class="suggestion-list" id="slider">
 
   <div class="suggestion-card">
@@ -216,7 +162,6 @@
 
 </div>
 
-    <!-- RIGHT ARROW -->
     <button class="arrow right">&#10095;</button>
 
   </div>
@@ -279,8 +224,6 @@ document.getElementById("total").textContent = "EGP " + total;
 document.getElementById("subtotal").textContent = "EGP " + total;
 </script>
 
-
-<!-- ================= JS FIXED ================= -->
 <script>
 let cartCount = 0;
 
