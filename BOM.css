@@ -2100,7 +2100,6 @@ h5{
 .remove-item {
     background-color: transparent;
     color: white;
-    border: none; /* optional */
     cursor: pointer;
 }
 .heart-btn {
