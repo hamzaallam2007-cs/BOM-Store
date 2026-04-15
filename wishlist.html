@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOM store-Wishlist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="BOM.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishlist - BOM Store</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="BOM.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<style>
+.product-image { position: relative; }
+
+.wishlist-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.add-cart,
+.remove-item {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.suggestion-card {
+  position: relative;
+}
+
+.heart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+.heart-btn.active {
+  color: red;
+}
+</style>
 </head>
-<body class="product-page">
-    <nav class="navbar">
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
         <div class="logo-container">
             <img src="images/logo.png" alt="BOM Logo" class="logo-img">
         </div>
@@ -27,7 +79,7 @@
             </div>
           <a href="wishlist.html" class="nav-icon">
                 <i class="fa-regular fa-heart"></i>
-                <span class="badge-count">2</span>
+                <span class="badge-count">4</span>
             </a>
            <a href="cart.html" class="nav-icon">
                 <i class="fa-solid fa-bag-shopping"></i>
@@ -38,54 +90,137 @@
             </a>
         </div>
     </nav>
-
-<section class="wishlist-section">
+<header class="main-title">
     <h1>My Wishlist</h1>
+</header>
 
-    <div class="product-grid">
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Black Nike-Hoodie.jpeg" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Black Nike Hoodie</h3>
-                <p>EGP 3200</p>
-            </div>
+<!-- ================= WISHLIST ================= -->
+<section class="wishlist-section">
+<div class="product-grid" id="wishlist-container">
+ <div class="product-grid">
+                <div class="product-card">
+                    <span class="product-badge">HOT</span>
+                    <div class="product-image"><img src="images/Gucci bag.jpeg" alt="Gucci Bag"></div>
+                    <div class="product-info"><h3>Brown Shoulder Bag-Gucci</h3><p>EGP 139751</p></div> <div class="wishlist-actions">
+                    <div class="quick-add-overlay"></div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
         </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/arogate_pink.webp" alt="arogate_pink"></div>
+                    <div class="product-info"><h3>Arrogate Pink-Assaf</h3><p>EGP 4500</p></div> <div class="wishlist-actions">
+           <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+            <span class="product-badge sale">SALE</span>
+                    <span class="price-old">EGP 5000</span>
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Blue Nike - Shorts.jpeg" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Blue Nike Shorts</h3>
-                <p>EGP 3050</p>
-            </div>
         </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Grey-Linen Pullover Shirt.jpeg" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Grey Linen Pullover</h3>
-                <p>EGP 2700</p>
-            </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/White Summer Dress 2.jpg" alt="Dress-Zara"></div>
+                    <div class="product-info"><h3>White Halter Flare Summer Dress-Zara</h3><p>EGP 2590</p></div> 
+                 <div class="wishlist-actions">
+           <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
         </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/Maryland-Zip Up-Sweatshirt.webp" alt="">
-            </div>
-            <div class="product-info">
-                <h3>Maryland Zip-Up</h3>
-                <p>EGP 2150</p>
-            </div>
-        </div>
-
-    </div>
+              </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/kids12.webp" alt="arogate_pink"></div>
+                    <div class="product-info"><h3>Pajamas For Baby Boys</h3><p>EGP 950</p></div> <div class="wishlist-actions">
+            <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+            <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+            <span class="product-badge sale">SALE</span>
+                    <span class="price-old">EGP 1000</span>
+                </div>
+                </div>
+            </div> 
+</div>
 </section>
+
+<!-- ================= SUGGESTIONS ================= -->
+<section class="wishlist-section">
+<h1>Suggestions</h1>
+
+<div class="product-grid">
+    
+
+<!-- Linen -->
+
+<div class="suggestions">
+
+  <div class="suggestions-wrapper">
+    
+    <!-- LEFT ARROW -->
+    <div class="suggestion-list" id="slider">
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/vanilla mist.jpg">
+    <p>vanilla mist</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/Double Face Nike Jacket.png">
+    <p>Double Face Nike Jacket</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/Burgundy Hoddie.jpeg">
+    <p>Burgundy Hoddie</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/White Summer Dress 2.jpg">
+    <p>White Summer Dress</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/oud.jpg">
+    <p>oud perfume</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/volume mascara.jpg">
+    <p>volume mascara</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/white classic puma shoes.jpg">
+    <p>white classic puma shoes</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/beige hoodie.jpg">
+    <p>beige hoodie</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/Maryland-Zip Up-Sweatshirt.webp">
+    <p>Maryland-Zip Up-Sweatshirt</p>
+  </div>
+
+  <div class="suggestion-card">
+    <span onclick="this.classList.toggle('active')" class="heart-btn">♥</span>
+    <img src="images/Blue Nike - Shorts.jpeg">
+    <p>Blue Nike - Shorts</p>
+  </div>
+
+</div>
+
+    <!-- RIGHT ARROW -->
+    <button class="arrow right">&#10095;</button>
+
+  </div>
+
 
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -95,9 +230,10 @@
             </div>
             <div class="footer-column">
                 <h3>Help</h3>
-                <ul><li><a href="contact.html">Contact Us</a></li></ul>
-                <ul><li><a href="about.html">About Us</a></li></ul>
-
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
             </div>
             <div class="footer-column">
                 <h3>Quick Links</h3>
@@ -112,6 +248,64 @@
             <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
+
+    <script>
+const slider = document.getElementById("slider");
+
+document.querySelector(".arrow.left").onclick = () => {
+  slider.scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+};
+
+document.querySelector(".arrow.right").onclick = () => {
+  slider.scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+};
+</script>
+
+<script>
+let prices = document.querySelectorAll(".price");
+let total = 0;
+
+prices.forEach(price => {
+  total += Number(price.textContent);
+});
+
+document.getElementById("total").textContent = "EGP " + total;
+document.getElementById("subtotal").textContent = "EGP " + total;
+</script>
+
+
+<!-- ================= JS FIXED ================= -->
+<script>
+let cartCount = 0;
+
+document.addEventListener("click", function(e) {
+
+    if (e.target.closest(".wishlist-heart")) {
+        e.target.closest(".wishlist-heart").classList.toggle("active");
+    }
+
+    if (e.target.closest(".remove-item")) {
+        e.target.closest(".product-card").remove();
+    }
+
+    if (e.target.closest(".add-cart")) {
+        cartCount++;
+        document.getElementById("cart-count").textContent = cartCount;
+        localStorage.setItem("cartCount", cartCount);
+    }
+});
+
+window.onload = () => {
+    cartCount = localStorage.getItem("cartCount") || 0;
+    document.getElementById("cart-count").textContent = cartCount;
+};
+</script>
 
 </body>
 </html>
