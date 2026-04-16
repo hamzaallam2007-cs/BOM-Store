@@ -40,33 +40,33 @@
         </div>
     </nav>
 
-<br>
-
-<!-- PRODUCT PAGE -->
 <main class="product-container">
 
-    <!-- LEFT SIDE -->
     <div class="product-left">
         <div class="main-image-holder">
-    <img src="images/lip3.webp" id="mainImg" alt="lipstick">
-</div>
+            <img src="images/lip3.webp" id="mainImg" alt="lipstick">
+        </div>
 
-        <!-- THUMBNAILS -->
         <div class="small-images">
 
-            <img src="images/lip3.webp" class="thumb active" onclick="changeImg(this.src)">
-            <img src="images/lip1.webp" class="thumb" onclick="changeImg(this.src)">
-            <img src="images/lip2.jpg" class="thumb" onclick="changeImg(this.src)">
+            <img src="images/lip3.webp" class="thumb active" onclick="changeImg(this.src)" alt="lip3">
+            <img src="images/lip1.webp" class="thumb" onclick="changeImg(this.src)" alt="lip1">
+            <img src="images/lip2.jpg" class="thumb" onclick="changeImg(this.src)" alt="lip2">
 
         </div>
 
     </div>
 
-    <!-- RIGHT SIDE -->
     <div class="product-right">
         
+        <nav class="breadcrumb">Makeup / Lipstick / Matte</nav>
 
         <h1 class="p-title">Matte Lipstick</h1>
+
+        <div class="p-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <span>(89)</span>
+        </div>
 
         <p class="p-price">EGP 300</p>
 
@@ -74,11 +74,10 @@
             Smooth matte lipstick with soft finish and long lasting color 💄
         </p>
 
-        <!-- SELECT SHADE -->
         <div class="p-options">
-
-            <h3>Select Shade</h3>
-
+            <div class="size-header"></div>
+            <h2>Select Shade</h2>
+        </div>
             <div class="size-chips">
 
                 <button class="size-chip active" onclick="changeShade('pink')">Pink</button>
@@ -87,9 +86,6 @@
 
             </div>
 
-        </div>
-
-        <!-- ACTIONS -->
         <div class="p-actions">
 
             <div class="quantity">
@@ -103,13 +99,9 @@
 
         </div>
         <div class="p-extra-info">
-
-    <p><i class="fa-solid fa-truck-fast"></i> Free Delivery on orders over EGP 5000</p>
-
-    <p><i class="fa-solid fa-rotate-left"></i> 14 Days Return Policy</p>
-
-</div>
-
+            <p><i class="fa-solid fa-truck-fast"></i> Free Delivery on orders over EGP 5000</p>
+            <p><i class="fa-solid fa-rotate-left"></i> 14 Days Return Policy</p>
+        </div>
     </div>
 
 </main>
@@ -141,40 +133,7 @@
     </footer>
 
 
-<!-- SCRIPT -->
-<script>
-
-// change main image (thumbnails)
-function changeImg(src){
-    document.getElementById("mainImg").src = src;
-}
-
-// change shade
-function changeShade(color){
-
-    const img = document.getElementById("mainImg");
-
-    if(color === "pink"){
-        img.src = "images/lip3.webp";
-    }
-    else if(color === "nude"){
-        img.src = "images/lip1.webp";
-    }
-    else if(color === "red"){
-        img.src = "images/lip2.jpg";
-    }
-
-}
-
-// quantity
-function changeQty(val){
-    let qty = document.getElementById("qty");
-    let newVal = parseInt(qty.value) + val;
-    if(newVal >= 1){
-        qty.value = newVal;
-    }
-}
-
+<script src="BOM.js">
 </script>
 
 </body>

@@ -34,7 +34,7 @@
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span class="badge-count">5</span>
             </a>
-                       <a href="account.html" class="account-btn">My Account</a>
+            <a href="account.html" class="account-btn">My Account</a>
         </div>
     </nav>
     <br>
@@ -47,9 +47,9 @@
                 <img src="images/White_Summer_Dress_2.jpg" id="mainImg" alt="white dress">
             </div>
             <div class="small-images">
-                <img src="images/White_Summer_Dress_2.jpg" class="thumb active" onclick="changeImg(this.src)">
-                <img src="images/zara white dress 2.jpg" class="thumb" onclick="changeImg(this.src)">
-                <img src="images/zara white dress 4.jpg" class="thumb" onclick="changeImg(this.src)">
+                <img src="images/White_Summer_Dress_2.jpg" alt="white dress" class="thumb active" onclick="changeImg(this.src)">
+                <img src="images/zara_white_dress_2.jpg" alt="white dress" class="thumb" onclick="changeImg(this.src)">
+                <img src="images/zara_white_dress_4.jpg" alt="white dress" class="thumb" onclick="changeImg(this.src)">
             </div>
         </div>
 
@@ -70,7 +70,7 @@
             </p>
 
             <div class="p-options">
-                <h3>Select Size</h3>
+                <h2>Select Size</h2>
                 <div class="size-chips">
                     <button class="size-chip">XS</button>
                     <button class="size-chip active">S</button>
@@ -124,23 +124,7 @@
     </footer>
 
     
-    <script>
-        // وظيفة تبديل الصور
-        function changeImg(smallImgSrc) {
-            var fullImg = document.getElementById("mainImg");
-            fullImg.src = smallImgSrc;
-        }
-
-        // وظيفة زيادة ونقصان الكمية
-        function changeQty(val) {
-            var qtyInput = document.getElementById("qty");
-            var currentVal = parseInt(qtyInput.value);
-            var newVal = currentVal + val;
-            
-            if (newVal >= 1) {
-                qtyInput.value = newVal;
-            }
-        }
+    <script src="BOM.js">
     </script>
 </body>
-</html>
+</html>      

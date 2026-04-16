@@ -1,21 +1,18 @@
 /*Home*/
+
 const popup=document.getElementById("popup");
 if(popup){
     let message=alert('Welcome to BOM store🛒🛍️\nHope you enjoy shopping with us🥰');
     console.log(message)
 }
 
-/*men*/
-// استهداف العناصر من الـ DOM
+/*Men/Kids/Makeup/Perfumes*/
+
 const categoryFilter = document.getElementById('categoryFilter');
 const priceFilter = document.getElementById('priceFilter');
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product-card');
 
-/**
- * وظيفة الفلترة الأساسية
- * تقوم بفحص القسم، السعر، والبحث بالاسم في نفس الوقت
- */
 function filterProducts() {
     const categoryValue = categoryFilter.value;
     const priceValue = priceFilter.value;
@@ -52,7 +49,6 @@ function filterProducts() {
     });
 }
 
-// إضافة المستمعات (Event Listeners) لتشغيل الفلتر عند كل تغيير
 if (categoryFilter) {
     categoryFilter.addEventListener('change', filterProducts);
 }
@@ -66,69 +62,8 @@ if (searchInput) {
 }
 
 
-/*item men*/
-
-// --- وظائف صفحة المنتج (Product Details) ---
-
-// 1. وظيفة تبديل الصور
-function changeImg(smallImgSrc) {
-    const fullImg = document.getElementById("mainImg");
-    if (fullImg) {
-        fullImg.src = smallImgSrc;
-    }
-}
-
-// 2. وظيفة زيادة ونقصان الكمية
-function changeQty(val) {
-    const qtyInput = document.getElementById("qty");
-    if (qtyInput) {
-        let currentVal = parseInt(qtyInput.value) || 1;
-        let newVal = currentVal + val;
-        
-        if (newVal >= 1) {
-            qtyInput.value = newVal;
-        }
-    }
-}
-
-/*my account*/
-// 1. وظائف الـ Modal (فتح وقفل)
-function openEditModal() {
-    document.getElementById('editModal').style.display = 'flex';
-}
-
-function closeEditModal() {
-    document.getElementById('editModal').style.display = 'none';
-}
-
-// 2. تحديث البيانات (Save Changes)
-document.addEventListener('submit', (e) => {
-    if (e.target.id === 'updateForm') {
-        e.preventDefault();
-        
-        // تحديث الإيميل في الصفحة
-        const newEmail = document.getElementById('editEmail').value;
-        document.getElementById('displayEmail').innerText = newEmail;
-        
-        closeEditModal();
-        alert('Done! ✅');
-    }
-});
-
-// 3. وظائف صفحة المنتج (الصور والكمية)
-function changeImg(src) {
-    document.getElementById("mainImg").src = src;
-}
-
-function changeQty(val) {
-    let qty = document.getElementById("qty");
-    let newVal = parseInt(qty.value) + val;
-    if (newVal >= 1) qty.value = newVal;
-}
-
 /*Women*/
 
-//Filter 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("i");
   const filterBtn = document.getElementById('filterBtn');
@@ -137,18 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchinput = document.getElementById('searchinput');
   const applyBtn = document.getElementById('applyBtn');
 
-  // Open
   filterBtn.addEventListener('click', () => {
     console.log("Filter button clicked"); // debug
     sidebar.style.width = '300px';
   });
 
-  // Close
   closeBtn.addEventListener('click', () => {
     sidebar.style.width = '0';
   });
 
-  // Filter products function
   function applyFilter() {
     const maxPrice = parseInt(document.getElementById("mychoice").value) || Infinity;
 
@@ -175,19 +107,90 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Apply filter on checkbox change
   const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"]');
   checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
 
-  // Apply filter when clicking Apply button
   applyBtn.addEventListener('click', applyFilter);
 
-  // Apply filter on page load
   applyFilter();
 
-  // Apply filter on search input
   searchinput.addEventListener('input', applyFilter);
 });
+
+
+/*Item-Men/Item-Women/Item-Make-up/Item-Perfume*/
+
+function changeImg(smallImgSrc) {
+    const fullImg = document.getElementById("mainImg");
+    if (fullImg) {
+        fullImg.src = smallImgSrc;
+    }
+}
+
+function changeQty(val) {
+    const qtyInput = document.getElementById("qty");
+    if (qtyInput) {
+        let currentVal = parseInt(qtyInput.value) || 1;
+        let newVal = currentVal + val;
+        
+        if (newVal >= 1) {
+            qtyInput.value = newVal;
+        }
+    }
+}
+
+
+/*Item-Make-up*/
+
+function changeShade(color){
+
+    const img = document.getElementById("mainImg");
+
+    if(color === "pink"){
+        img.src = "images/lip3.webp";
+    }
+    else if(color === "nude"){
+        img.src = "images/lip1.webp";
+    }
+    else if(color === "red"){
+        img.src = "images/lip2.jpg";
+    }
+
+}
+
+
+/*My Account*/
+
+function openEditModal() {
+    document.getElementById('editModal').style.display = 'flex';
+}
+
+function closeEditModal() {
+    document.getElementById('editModal').style.display = 'none';
+}
+
+document.addEventListener('submit', (e) => {
+    if (e.target.id === 'updateForm') {
+        e.preventDefault();
+        
+        // تحديث الإيميل في الصفحة
+        const newEmail = document.getElementById('editEmail').value;
+        document.getElementById('displayEmail').innerText = newEmail;
+        
+        closeEditModal();
+        alert('Done! ✅');
+    }
+});
+
+function changeImg(src) {
+    document.getElementById("mainImg").src = src;
+}
+
+function changeQty(val) {
+    let qty = document.getElementById("qty");
+    let newVal = parseInt(qty.value) + val;
+    if (newVal >= 1) qty.value = newVal;
+}
 
 
 /*Contact*/
@@ -203,13 +206,11 @@ function sendMessage() {
 
   if (input.value.trim() === "") return;
 
-  // User message
   let userMsg = document.createElement("div");
   userMsg.className = "message user";
   userMsg.innerText = input.value;
   messages.appendChild(userMsg);
 
-  // Fake bot reply
   let botMsg = document.createElement("div");
   botMsg.className = "message bot";
 
@@ -233,9 +234,9 @@ function sendMessage() {
   input.value = "";
 }
 
-// cart
 
-//arrows
+/*Cart/Wishlist/My orders*/
+
 const slider = document.getElementById("slider");
 
 document.querySelector(".arrow.left").onclick = () => {
@@ -252,8 +253,6 @@ document.querySelector(".arrow.right").onclick = () => {
   });
 };
 
-
-// sum of orders
 let prices = document.querySelectorAll(".price");
 let total = 0;
 
@@ -264,8 +263,6 @@ prices.forEach(price => {
 document.getElementById("total").textContent = "EGP " + total;
 document.getElementById("subtotal").textContent = "EGP " + total;
 
-
-  //alert
 function confirmOrder() {
   alert("Order confirmed✅");
 }

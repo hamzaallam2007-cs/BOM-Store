@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Orders - BOM Store</title>
+    <title>BOM Store-My Orders</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="BOM.css">
-    <link rel="stylesheet" href="orders.css">
-
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
@@ -65,7 +63,7 @@
                     <tr>
                         <td>
                             <div class="product-cell">
-                                <img src="images/Blue Nike - Shorts.jpeg" alt="product">
+                                <img src="images/Blue_Nike_Shorts.jpeg" alt="product">
                                 <span>Blue Shorts - Nike</span>
                             </div>
                         </td>
@@ -73,11 +71,13 @@
                         <td>Apr 10, 2026</td>
                         <td><span class="status-badge delivered">Delivered</span></td>
                         <td class="price-cell">EGP 3,050</td>
-                        <td><button class="view-btn">View</button></td>
-                    </tr> 
+                        <td><button class="view-btn">View</button>
+                    </td>
+                    </tr>
+                    <tr> 
                         <td>
                             <div class="product-cell">
-                                <img src="images/floral perfume.webp" alt="product">
+                                <img src="images/floral_perfume.webp" alt="product">
                                 <span>Floral Perfume</span>
                             </div>
                         </td>
@@ -90,10 +90,11 @@
                                 <button class="view-btn">View</button>
                             </div>
                         </td>
+                    </tr>
                     <tr>
-                        <td>
+                    <td>
                             <div class="product-cell">
-                                <img src="images/Gucci pumps.jpeg" alt="product">
+                                <img src="images/Gucci_pumps.jpeg" alt="product">
                                 <span>Black Donna Pumps-Gucci</span>
                             </div>
                         </td>
@@ -106,7 +107,7 @@
                     <tr>
                         <td>
                             <div class="product-cell">
-                                <img src="images/Black-basic top.jpeg" alt="product">
+                                <img src="images/Black_basic_top.jpeg" alt="product">
                                 <span>Black Basic Top - Zara</span>
                             </div>
                         </td>
@@ -125,13 +126,14 @@
             </table>
         </div>
     </main>
-    
-<section class="wishlist-section">
+
+
+<div class="wishlist-section">
 <h1>Order up</h1>
 
 <div class="product-grid">
 
-<div class="suggestions">
+  <div class="suggestions">
 
   <div class="suggestions-wrapper">
 
@@ -139,59 +141,62 @@
 
     <div class="suggestion-list" id="slider">
       <div class="suggestion-card">
-    <img src="images/vanilla mist.jpg">
+    <img src="images/vanilla_mist.jpg" alt="vanilla mist">
     <p>vanilla mist</p>
   </div>
 
   <div class="suggestion-card">
-    <img src="images/Double Face Nike Jacket.png">
+    <img src="images/Double_Face_Nike_Jacket.png" alt="Double Face Nick jacket">
     <p>Double Face Nike Jacket</p>
   </div>
 
   <div class="suggestion-card">
-    <img src="images/Burgundy Hoddie.jpeg">
+    <img src="images/Burgundy_Hoddie.jpeg" alt="Burgundy Hoddie">
     <p>Burgundy Hoddie</p>
   </div>
    <div class="suggestion-card">
-    <img src="images/White Summer Dress 2.jpg">
+    <img src="images/White_Summer_Dress_2.jpg" alt="White Summer Dress">
     <p>White Summer Dress</p>
   </div>
 
   <div class="suggestion-card">
-    <img src="images/oud.jpg">
+    <img src="images/oud.jpg" alt="Oud">
     <p>oud perfume</p>
   </div>
 
   <div class="suggestion-card">
-    <img src="images/volume mascara.jpg">
+    <img src="images/volume_mascara.jpg" alt="volume mascara">
     <p>volume mascara</p>
   </div>
   <div class="suggestion-card">
-    <img src="images/white classic puma shoes.jpg">
+    <img src="images/white_classic_puma_shoes.jpg" alt="White Classic Puma Shoes">
     <p>white classic puma shoes</p>
   </div>
 
   <div class="suggestion-card">
-    <img src="images/beige hoodie.jpg">
+    <img src="images/beige_hoodie.jpg" alt="Beige Hoodie">
     <p>beige hoodie</p>
   </div>
 
   <div class="suggestion-card">
-    <img src="images/Maryland-Zip Up-Sweatshirt.webp">
+    <img src="images/Maryland_Zip_Up_Sweatshirt.webp" alt="Maryland Zip UpSweatshirt">
     <p>Maryland-Zip Up-Sweatshirt</p>
   </div>
 
     <div class="suggestion-card">
-    <img src="images/Blue Nike - Shorts.jpeg">
+    <img src="images/Blue_Nike_Shorts.jpeg" alt="Blue Nike Shorts">
     <p>Blue Nike - Shorts</p>
     </div>
 
     </div>
 
+
     <button class="arrow right">&#10095;</button>
 
   </div>
-
+</div>
+</div>
+</div>
 <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-column">
@@ -219,22 +224,7 @@
     </footer>
 
 
-    <script>
-        const slider = document.getElementById("slider");
-
-document.querySelector(".arrow.left").onclick = () => {
-  slider.scrollBy({
-    left: -300,
-    behavior: "smooth"
-  });
-};
-
-document.querySelector(".arrow.right").onclick = () => {
-  slider.scrollBy({
-    left: 300,
-    behavior: "smooth"
-  });
-};
-    </script>
+<script src="BOM.js">
+</script>
 </body>
 </html>
