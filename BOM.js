@@ -267,5 +267,5 @@ document.getElementById("subtotal").textContent = "EGP " + total;
 
   //alert
 function confirmOrder() {
-  alert("Order confirmed");
+  alert("Order confirmed✅");
 }
