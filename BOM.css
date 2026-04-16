@@ -121,8 +121,31 @@ html, body {
 }
 
 .account-btn {
+  display: inline-block;
+   background-color: var(--brand-pink);
+    border: 2px solid var(--brand-pink);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+  text-decoration: none;
+      color: black;
+
+}
+
+.account-btn:hover {
+  background-color: black;
+    border-color: black;
+    transform: translateY(-2px);
+        color: var(--brand-pink);
+
+}
+
+/*.account-btn {
     background-color: var(--brand-pink);
-    color: black;
     border: 2px solid var(--brand-pink);
     padding: 8px 20px;
     border-radius: 20px;
@@ -135,10 +158,18 @@ html, body {
 
 .account-btn:hover {
     background-color: black;
-    color: var(--brand-pink);
     border-color: black;
     transform: translateY(-2px);
 }
+
+.account-btn a{
+    text-decoration: none;
+    color: black;
+}
+
+.account-btn a:hover{
+    color: var(--brand-pink);
+}*/
 
 /*Account page*/
 .edit-btn {
