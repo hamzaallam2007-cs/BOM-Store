@@ -1,6 +1,9 @@
 /*Home*/
-let message=alert('Welcome to BOM store🛒🛍️')
-console.log(message)
+const popup=document.getElementById("popup");
+if(popup){
+    let message=alert('Welcome to BOM store🛒🛍️\nHope you enjoy shopping with us🥰');
+    console.log(message)
+}
 
 /*men*/
 // استهداف العناصر من الـ DOM
