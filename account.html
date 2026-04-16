@@ -6,7 +6,7 @@
     <title>BOM Store-My Account</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="BOM.css">
-     <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
@@ -20,24 +20,22 @@
             <li><a href="cosmetic.html">Cosmetics</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-       <div class="nav-actions">
-    <div class="search-box">
-        <input type="text" placeholder="Search...">
-    </div>
-
-     <a href="wishlist.html" class="nav-icon">
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="wishlist.html" class="nav-icon">
                 <i class="fa-regular fa-heart"></i>
-                <span class="badge-count">2</span>
+                <span class="badge-count">4</span>
             </a>
-           <a href="cart.html" class="nav-icon">
+            <a href="cart.html" class="nav-icon">
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span class="badge-count">5</span>
             </a>
-
-    <a href="account.html">
-        <button class="account-btn">My Account</button>
-    </a>
-</div>
+            <a href="account.html">
+                <button class="account-btn">My Account</button>
+            </a>
+        </div>
     </nav>
 
     <div class="account-container">
@@ -48,90 +46,83 @@
                 <div class="user-avatar">
                     <img src="images/Acc photo.jpeg" alt="Profile">
                 </div>
-             <div class="user-details">
-    <div class="info-box">
-        <span class="info-label">Email</span>
-        <div class="email-display-box">
-            <span class="info-text">username@example.com</span>
-        </div>
-    </div>
+                <div class="user-details">
+                    <div class="info-box">
+                        <span class="info-label">Email</span>
+                        <div class="email-display-box">
+                            <span id="displayEmail" class="info-text">username@example.com</span>
+                        </div>
+                    </div>
 
-    <div class="info-box">
-        <span class="info-label">Password</span>
-        <div class="pass-display-box">
-            <input type="password" value="********" class="info-text-input pink-pass" readonly>
+                    <div class="info-box">
+                        <span class="info-label">Password</span>
+                        <div class="pass-display-box">
+                            <input type="password" value="********" class="info-text-input pink-pass" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="edit-btn" onclick="openEditModal()">Edit Profile</button>
         </div>
-    </div>
-</div>
-</div>
-            <button class="edit-btn">Edit Profile</button>
-        </div>
-        
 
         <div class="recommended-section">
-    <h2>Recommended for you</h2>
-    <div class="products-grid">
-        
-        <div class="product-card">
-            <div class="product-img">
-                <img src="images/Grey Sweatpants-mensfit.jpeg" alt="sweatpants">
-            </div>
-            <div class="product-info">
-                <h3>Grey Sweatpants</h3>
-                <p>Ultra-comfortable grey sweatpants with a modern wide-leg fit. Perfect for a relaxed silhouette that pairs easily with any sneakers</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-img">
-                <img src="images/Burgundy Hoddie.jpeg" alt="Hoddie">
-            </div>
-            <div class="product-info">
-                <h3>Burgundy Hoddie</h3>
-                <p>Premium heavyweight fleece hoodie in a deep burgundy shade. Designed with a clean minimalist chest print for a sophisticated urban look</p>
+            <h2>Recommended for you</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Grey Sweatpants-mensfit.jpeg" alt="sweatpants"></div>
+                    <div class="product-info"><h3>Grey Sweatpants</h3><p>Modern wide-leg fit.</p></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Burgundy Hoddie.jpeg" alt="Hoddie"></div>
+                    <div class="product-info"><h3>Burgundy Hoddie</h3><p>Premium heavyweight fleece.</p></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Double Face Nike Jacket.png" alt="Jacket"></div>
+                    <div class="product-info"><h3>Double Face Nike Jacket</h3><p>Winter essential.</p></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/offwhite shirt.jpeg" alt="Shirt"></div>
+                    <div class="product-info"><h3>offwhite Sweatshirt</h3><p>Old-school aesthetic.</p></div>
+                </div>
             </div>
         </div>
-
-        <div class="product-card">
-            <div class="product-img">
-                <img src="images/Double Face Nike Jacket.png" alt="Double Face Nike Jacket">
-            </div>
-            <div class="product-info">
-                <h3>Double Face Nike Jacket</h3>
-                <p>Stay warm with this iconic double-face sherpa jacket. Featuring a bold oversized swoosh and a cozy texture, it's the ultimate winter essential</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-img">
-                <img src="images/offwhite shirt.jpeg" alt="Offwhite Shirt">
-            </div>
-            <div class="product-info">
-                <h3>offwhite Sweatshirt</h3>
-                <p>Retro-inspired off-white sweatshirt with a classic brown collar. Features a high-quality 'California' print for that perfect old-school aesthetic</p>
-            </div>
-        </div>
-
-    </div>
-</div>
 
         <h2 class="section-subtitle"><a href="myorders.html">My Orders</a></h2>
         <div class="orders-grid">
             <div class="order-card">
-                <div class="order-img">
-                    <img src="images/Blue Nike - Shorts.jpeg" alt="Order Item">
-                </div>
+                <div class="order-img"><img src="images/Blue Nike - Shorts.jpeg" alt="Order Item"></div>
                 <div class="order-details">
-                    <h3>Order #5421</h3>
+                    <h3>Order #BOM5421</h3>
                     <p class="Product-Name">Blue Nike Shorts</p>
                     <p class="order-price">EGP 3,050</p>
                 </div>
             </div>
-            </div>
+        </div>
     </div>
 
+    <div id="editModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEditModal()">&times;</span>
+            <h2 class="modal-title">Update Profile</h2>
+            <form id="updateForm">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="editEmail" value="username@example.com">
+                </div>
+                <div class="input-group">
+                    <label>New Password</label>
+                    <input type="password" id="editPass" placeholder="Enter new password">
+                </div>
+                  <div class="input-group">
+                    <label>New Password</label>
+                    <input type="password" id="confirm Pass" placeholder="confirm password">
+                </div>
+                <button type="submit" class="save-modal-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
 
-    <footer class="site-footer">
+<footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-column">
                 <h3>About BOM</h3>
@@ -139,8 +130,10 @@
             </div>
             <div class="footer-column">
                 <h3>Help</h3>
-                <ul><li><a href="contact.html">Contact Us</a></li></ul>
-             <ul><li><a href="about.html">About Us</a></li></ul>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
             </div>
             <div class="footer-column">
                 <h3>Quick Links</h3>
@@ -155,5 +148,7 @@
             <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
+
+    <script src="BOM.js"></script>
 </body>
 </html>

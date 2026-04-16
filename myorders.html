@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Orders - BOM Store</title>
 
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="BOM.css">
     <link rel="stylesheet" href="orders.css">
@@ -33,7 +32,7 @@
 
             <a href="wishlist.html" class="nav-icon">
                 <i class="fa-regular fa-heart"></i>
-                <span class="badge-count">2</span>
+                <span class="badge-count">4</span>
             </a>
 
             <a href="cart.html" class="nav-icon">
@@ -46,51 +45,156 @@
             </a>
         </div>
     </nav>
+
     <header class="main-title">
         <h1>My Orders</h1>
     </header>
 
     <main class="orders-container">
-            <div class="order-card">
-            <div class="order-left">
-                <img src="images/Blue Nike - Shorts.jpeg">
-                <div class="order-info">
-                    <h3>Blue Shorts - Nike</h3>
-                    <p>Order ID: #BOM5421</p>
-                    <p class="order-status pending">Delivered</p>
-                </div>
-            </div>
-
-            <div class="order-right">
-                <div class="order-price">EGP 3050</div>
-                <div class="order-buttons">
-                    <button>View</button>
-                </div>
-            </div>
+        <div class="table-wrapper">
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="product-cell">
+                                <img src="images/Blue Nike - Shorts.jpeg" alt="product">
+                                <span>Blue Shorts - Nike</span>
+                            </div>
+                        </td>
+                        <td>#BOM5421</td>
+                        <td>Apr 10, 2026</td>
+                        <td><span class="status-badge delivered">Delivered</span></td>
+                        <td class="price-cell">EGP 3,050</td>
+                        <td><button class="view-btn">View</button></td>
+                    </tr> 
+                        <td>
+                            <div class="product-cell">
+                                <img src="images/floral perfume.webp" alt="product">
+                                <span>Floral Perfume</span>
+                            </div>
+                        </td>
+                        <td>#BOM1967</td>
+                        <td>Apr 30, 2025</td>
+                        <td><span class="status-badge pending">cancelled</span></td>
+                        <td class="price-cell">EGP 1,200</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="view-btn">View</button>
+                            </div>
+                        </td>
+                    <tr>
+                        <td>
+                            <div class="product-cell">
+                                <img src="images/Gucci pumps.jpeg" alt="product">
+                                <span>Black Donna Pumps-Gucci</span>
+                            </div>
+                        </td>
+                        <td>#BOM5681</td>
+                        <td>jan 19, 2025</td>
+                        <td><span class="status-badge delivered">Delivered</span></td>
+                        <td class="price-cell">EGP 66,404</td>
+                        <td><button class="view-btn">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product-cell">
+                                <img src="images/Black-basic top.jpeg" alt="product">
+                                <span>Black Basic Top - Zara</span>
+                            </div>
+                        </td>
+                        <td>#BOM12345</td>
+                        <td>Apr 13, 2026</td>
+                        <td><span class="status-badge pending">Pending</span></td>
+                        <td class="price-cell">EGP 1,100</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="track-btn">Track</button>
+                                <button class="view-btn">View</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <div class="order-card">
-            <div class="order-left">
-                <img src="images/Black-basic top.jpeg">
-                <div class="order-info">
-                    <h3>Black Basic Top - Zara</h3>
-                    <p>Order ID: #BOM12345</p>
-                    <p class="order-status delivered">Pending</p>
-                </div>
-            </div>
-
-            <div class="order-right">
-                <div class="order-price">EGP 1100</div>
-                <div class="order-buttons">
-                      <button>Track</button>
-                    <button>View</button>
-                </div>
-            </div>
-        </div>
-
     </main>
+    
+<section class="wishlist-section">
+<h1>Order up</h1>
 
-     <footer class="site-footer">
+<div class="product-grid">
+
+<div class="suggestions">
+
+  <div class="suggestions-wrapper">
+
+    <button class="arrow left">&#10094;</button>
+
+    <div class="suggestion-list" id="slider">
+      <div class="suggestion-card">
+    <img src="images/vanilla mist.jpg">
+    <p>vanilla mist</p>
+  </div>
+
+  <div class="suggestion-card">
+    <img src="images/Double Face Nike Jacket.png">
+    <p>Double Face Nike Jacket</p>
+  </div>
+
+  <div class="suggestion-card">
+    <img src="images/Burgundy Hoddie.jpeg">
+    <p>Burgundy Hoddie</p>
+  </div>
+   <div class="suggestion-card">
+    <img src="images/White Summer Dress 2.jpg">
+    <p>White Summer Dress</p>
+  </div>
+
+  <div class="suggestion-card">
+    <img src="images/oud.jpg">
+    <p>oud perfume</p>
+  </div>
+
+  <div class="suggestion-card">
+    <img src="images/volume mascara.jpg">
+    <p>volume mascara</p>
+  </div>
+  <div class="suggestion-card">
+    <img src="images/white classic puma shoes.jpg">
+    <p>white classic puma shoes</p>
+  </div>
+
+  <div class="suggestion-card">
+    <img src="images/beige hoodie.jpg">
+    <p>beige hoodie</p>
+  </div>
+
+  <div class="suggestion-card">
+    <img src="images/Maryland-Zip Up-Sweatshirt.webp">
+    <p>Maryland-Zip Up-Sweatshirt</p>
+  </div>
+
+    <div class="suggestion-card">
+    <img src="images/Blue Nike - Shorts.jpeg">
+    <p>Blue Nike - Shorts</p>
+    </div>
+
+    </div>
+
+    <button class="arrow right">&#10095;</button>
+
+  </div>
+
+    <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-column">
                 <h3>About BOM</h3>
@@ -117,5 +221,22 @@
         </div>
     </footer>
 
+    <script>
+        const slider = document.getElementById("slider");
+
+document.querySelector(".arrow.left").onclick = () => {
+  slider.scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+};
+
+document.querySelector(".arrow.right").onclick = () => {
+  slider.scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+};
+    </script>
 </body>
 </html>

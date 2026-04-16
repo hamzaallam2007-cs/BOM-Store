@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Store-Makeup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="BOM.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="BOM Logo" class="logo-img">
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="clothing.html">Clothes</a>
+            <a href="cosmetic.html">Cosmetics</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+          <a href="wishlist.html" class="nav-icon">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count">4</span>
+            </a>
+           <a href="cart.html" class="nav-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge-count">5</span>
+            </a>
+            <a href="account.html">
+            <button class="account-btn">My Account</button>
+            </a>
+        </div>
+    </nav>
+
+<!-- CONTENT -->
+<main class="product-page-content">
+
+<!-- FILTER -->
+<div class="filter-bar">
+
+    <select id="categoryFilter" class="sort-select">
+        <option value="all">ALL</option>
+        <option value="lip">LIP</option>
+        <option value="eye">EYE</option>
+        <option value="face">FACE</option>
+    </select>
+
+    <select id="priceFilter" class="sort-select">
+        <option value="all">PRICE</option>
+        <option value="low">Under 500</option>
+        <option value="mid">500 - 1000</option>
+        <option value="high">Above 1000</option>
+    </select>
+
+</div>
+
+<!-- PRODUCTS -->
+<div class="products-grid-container">
+
+    <div class="product-card lip" data-price="450">
+        <div class="product-img-holder">
+             <div class="product-badge">BEST SELLER</div>
+            <img src="images/lipgloss.png">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">lipgloss</h3>
+            <p class="product-price">EGP 450</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <div class="product-card eye" data-price="520">
+        <div class="product-img-holder">
+             <div class="product-badge sale">SALE</div>
+            <img src="images/mascara.jpg">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">MASCARA</h3>
+            <p class="product-price">EGP 520</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <div class="product-card face" data-price="610">
+        <div class="product-img-holder">
+            <img src="images/blush.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Blush</h3>
+            <p class="product-price">EGP 610</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <div class="product-card lip" data-price="300">
+        <div class="product-img-holder">
+            <img src="./images/lipstick.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">lipstick</h3>
+            <p class="product-price">EGP 300</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <div class="product-card eye" data-price="700">
+        <div class="product-img-holder">
+             <div class="product-badge sale">SALE</div>
+            <img src="images/eyeliner.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name"> Eyeliner</h3>
+            <p class="product-price">EGP 700</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <div class="product-card face" data-price="900">
+        <div class="product-img-holder">
+            <img src="images/foundation.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name"> Foundation</h3>
+            <p class="product-price">EGP 900</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <!-- NEW PRODUCTS -->
+
+    <div class="product-card lip" data-price="250">
+        <div class="product-img-holder">
+             <div class="product-badge">BEST SELLER</div>
+            <img src="images/lipoil.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">lipoil</h3>
+            <p class="product-price">EGP 250</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <div class="product-card eye" data-price="650">
+        <div class="product-img-holder">
+             <div class="product-badge">BEST SELLER</div>
+            <img src="images/eyeshadow.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Eyeshadow </h3>
+            <p class="product-price">EGP 650</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    <div class="product-card face" data-price="720">
+        <div class="product-img-holder">
+            <img src="images/highlighter.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name"> Highlighter</h3>
+            <p class="product-price">EGP 720</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+ <div class="product-card face" data-price="720">
+        <div class="product-img-holder">
+            <img src="images/powder.jpg">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">powder</h3>
+            <p class="product-price">EGP 720</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+        </div>
+
+         <div class="product-card face" data-price="720">
+        <div class="product-img-holder">
+            <img src="images/concealer.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">concealer</h3>
+            <p class="product-price">EGP 720</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+        </div>
+
+         <div class="product-card lip" data-price="720">
+        <div class="product-img-holder">
+            <img src="images/lipliner.webp">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">lipliner</h3>
+            <p class="product-price">EGP 720</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(this)">
+    Add to Cart 🛒
+</button>
+    </div>
+
+    </div>
+
+    
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h3>About BOM</h3>
+                <p>BOM Store is your destination for trends. Quality and style in one place.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="men.html">Men's Collection</a></li>
+                    <li><a href="women.html">Women's Collection</a></li>
+                    <li><a href="kids.html">Kids' Collection</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+<!-- SCRIPT -->
+<script>
+const categoryFilter = document.getElementById('categoryFilter');
+const priceFilter = document.getElementById('priceFilter');
+const searchInput = document.getElementById('searchInput');
+const products = document.querySelectorAll('.product-card');
+
+function filterProducts() {
+    const categoryValue = categoryFilter.value;
+    const priceValue = priceFilter.value;
+    const searchValue = searchInput.value.toLowerCase();
+
+    products.forEach(product => {
+        const productCategory = product.classList.contains(categoryValue) || categoryValue === 'all';
+        const productPrice = parseInt(product.getAttribute('data-price'));
+        const productName = product.querySelector('.product-name').innerText.toLowerCase();
+
+        let priceMatch = false;
+        if (priceValue === 'all') priceMatch = true;
+        else if (priceValue === 'low' && productPrice < 500) priceMatch = true;
+        else if (priceValue === 'mid' && productPrice >= 500 && productPrice <= 1000) priceMatch = true;
+        else if (priceValue === 'high' && productPrice > 1000) priceMatch = true;
+
+        const searchMatch = productName.includes(searchValue);
+
+        if (productCategory && priceMatch && searchMatch) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+let cart = [];
+
+function addToCart(button) {
+    const card = button.parentElement;
+
+    const name = card.querySelector(".product-name").innerText;
+    const price = card.querySelector(".product-price").innerText;
+    const img = card.querySelector("img").src;
+
+    const product = {
+        name: name,
+        price: price,
+        img: img
+    };
+
+    cart.push(product);
+
+    alert("Added to cart 🛒: " + name);
+
+    console.log(cart);
+}
+
+categoryFilter.addEventListener('change', filterProducts);
+priceFilter.addEventListener('change', filterProducts);
+searchInput.addEventListener('input', filterProducts);
+</script>
+
+</body>
+</html>

@@ -23,11 +23,11 @@
 
         <div class="nav-actions">
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search...">
+                <input type="text" id="searchinput" placeholder="Search...">
             </div>
           <a href="wishlist.html" class="nav-icon">
                 <i class="fa-regular fa-heart"></i>
-                <span class="badge-count">2</span>
+                <span class="badge-count">4</span>
             </a>
            <a href="cart.html" class="nav-icon">
                 <i class="fa-solid fa-bag-shopping"></i>
@@ -43,7 +43,7 @@
         <button id="filterBtn" class="filter_btn"><i class="fa-solid fa-filter"></i>  Filter</button>
             <div id="filterSidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
-                <h3>Filter by Color</h3>
+                <h3 class="margin-top">Filter by Color</h3>
                 <label><input type="checkbox" name="color" value="Red"> Red</label>
                 <label><input type="checkbox" name="color" value="Blue"> Blue</label>
                 <label><input type="checkbox" name="color" value="Black"> Black</label>
@@ -65,7 +65,7 @@
                 <!-- Sliding Filter Panel -->
                 <h3>Price Range</h3>
                 <label>EGP 0 <input type="range" name="mychoice" id="mychoice" min="0" max="200000" value="200000"> EGP 200,000</label>
-                <button onclick="applyFilter()">Apply</button>
+                <button id="applyBtn">Apply</button>
             </div>
 
             <div class="products-grid-container" id="productsGrid">
@@ -91,11 +91,13 @@
                 <div class="product-card" data-price="2590" data-color="White" data-category="Dress">
                     <div class="product-badge">BESTSELLER</div>
                     <div class="wish-heart"><i class="fa-regular fa-heart"></i></div>
+                    <a href="itemwomen.html" class="product-link">
                     <div class="product-img-holder">
                         <img src="images/White Summer Dress 2.jpg" alt="White Summer Zara Dress">
                         <div class="quick-add-overlay">
                             <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i>ADD TO MY CART</button>
                         </div>
+                    </a>
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">White Halter Flare Summer Dress-Zara</h3>
@@ -325,67 +327,7 @@
             <p>copyright&copy; 2026 BOM STORE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
-
-
-
-<script>
-const filterBtn = document.getElementById('filterBtn');
-const sidebar = document.getElementById('filterSidebar');
-const closeBtn = document.getElementById('closeBtn');
-const searchInput = document.getElementById('searchInput');
-const applyBtn = sidebar.querySelector('button'); // Apply button inside sidebar
-
-// Open sidebar
-filterBtn.addEventListener('click', () => {
-  sidebar.style.width = '300px';
-});
-
-// Close sidebar
-closeBtn.addEventListener('click', () => {
-  sidebar.style.width = '0';
-});
-
-// Filter products function
-function applyFilter() {
-    const maxPrice = parseInt(document.getElementById("mychoice").value) || Infinity;
-
-    const selectedColors = Array.from(document.querySelectorAll('input[name="color"]:checked'))
-        .map(cb => cb.value);
-
-    const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked'))
-        .map(cb => cb.value);
-
-    const products = document.querySelectorAll(".product-card"); // use correct class
-
-     const searchValue = searchInput.value.toLowerCase();
-
-    products.forEach(product => {
-        const price = parseInt(product.getAttribute("data-price")) || 0;
-        const color = product.getAttribute("data-color") || '';
-        const category = product.getAttribute("data-category") || '';
-        const productName = product.querySelector('.product-name').innerText.toLowerCase();
-
-        const matchPrice = price <= maxPrice;
-        const matchColor = selectedColors.length === 0 || selectedColors.includes(color);
-        const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
-
-        const searchMatch = productName.includes(searchValue);
-
-        product.style.display = (matchPrice && matchColor && matchCategory && searchMatch) ? "block" : "none";
-    });
-}
-
-// Apply filter on checkbox change
-const checkboxes = document.querySelectorAll('.sidebar input[type="checkbox"]');
-checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
-
-// Apply filter when clicking Apply button
-applyBtn.addEventListener('click', applyFilter);
-
-// Apply filter on page load (optional: shows correct products based on default slider/checkbox)
-window.addEventListener('DOMContentLoaded', applyFilter);
-
-searchInput.addEventListener('input', applyFilter);
+<script src="BOM.js">
 </script>
 </body>
 </html>
