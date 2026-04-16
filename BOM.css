@@ -41,6 +41,12 @@ html, body {
     color: white;
 }
 
+.logo img, .logo-img { 
+    height: 100px; 
+    width: auto; 
+    object-fit: contain; 
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -53,12 +59,6 @@ html, body {
     left: 0;
     width: 100%;
     z-index: 1000;
-}
-
-.logo img, .logo-img { 
-    height: 100px; 
-    width: auto; 
-    object-fit: contain; 
 }
 
 .nav-links { 
@@ -121,8 +121,8 @@ html, body {
 }
 
 .account-btn {
-  display: inline-block;
-   background-color: var(--brand-pink);
+    display: inline-block;
+    background-color: var(--brand-pink);
     border: 2px solid var(--brand-pink);
     padding: 8px 20px;
     border-radius: 20px;
@@ -131,17 +131,16 @@ html, body {
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.4s ease;
-  text-decoration: none;
-      color: black;
+    text-decoration: none;
+    color: black;
 
 }
 
 .account-btn:hover {
-  background-color: black;
+    background-color: black;
     border-color: black;
     transform: translateY(-2px);
-        color: var(--brand-pink);
-
+    color: var(--brand-pink);
 }
 
 /*Account page*/
@@ -160,9 +159,8 @@ html, body {
     color: black;
 }
 
-/* Modal Style */
 .modal-overlay {
-    display: none; /* مخفي في الأول */
+    display: none; 
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
@@ -274,7 +272,8 @@ html, body {
 .profile-header { 
     display: flex; 
     align-items: center; 
-    gap: 20px; }
+    gap: 20px; 
+}
 
 .user-avatar img {
     width: 90px;
@@ -385,56 +384,6 @@ html, body {
     margin-top: 30px;
 }
 
-/* --- تأثير خاص بصفحة الـ Clothing فقط --- */
-
-/* نحدد الـ product-card اللي جوه الـ product-grid بس */
-.product-grid .product-card {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    position: relative;
-    transform-origin: center;
-    background: rgba(255, 255, 255, 0.05); /* شكل زجاجي خفيف يماشي الصفحة */
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-/* حركة الميل يمين والرفعة لفوق */
-.product-grid .product-card:hover {
-    /* rotate(3deg) هي اللي بتعمل الميل يمين */
-    transform: translateY(-10px) rotate(3deg) !important;
-    
-    /* ضل ناعم بيتحرك مع الميل */
-    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.4) !important;
-    
-    /* تحديد الحواف باللون البينك */
-    border: 1px solid var(--brand-pink) !important;
-    z-index: 5;
-}
-
-/* حركة الصورة جوه الكارت */
-.product-grid .product-image img {
-    transition: transform 0.5s ease;
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.product-grid .product-card:hover .product-image img {
-    transform: scale(1.08); /* زووم خفيف للصورة */
-}
-
-/* تظبيط الـ Info تحت الصورة */
-.product-info h3 {
-    font-size: 14px;
-    margin: 10px 0 5px;
-    color: #fff;
-}
-
-.product-info p {
-    color: var(--brand-pink);
-    font-weight: bold;
-}
-
 .order-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -453,6 +402,46 @@ html, body {
     object-fit: cover; 
 }
 
+/* Clothes Page */
+.product-grid .product-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    position: relative;
+    transform-origin: center;
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-grid .product-card:hover {
+    transform: translateY(-10px) rotate(3deg) !important;
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid var(--brand-pink) !important;
+    z-index: 5;
+}
+
+.product-grid .product-image img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-grid .product-card:hover .product-image img {
+    transform: scale(1.08); 
+}
+
+.product-info h3 {
+    font-size: 14px;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+.product-info p {
+    color: var(--brand-pink);
+    font-weight: bold;
+}
+
 @media (max-width: 900px) {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -465,63 +454,41 @@ html, body {
     }
 }
 
-/*Clothes page*/
-.category-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 30px;
-}
-
-/* 1. تنسيق العناوين (Collections) - ألوان ثابتة */
-
-/* Men's Collection - أبيض */
 .category-section:not(.women):not(.kids) .clothing-card h3 {
     color: #ffffff !important;
     transition: all 0.3s ease;
 }
 
-/* Women's Collection - بينك */
 .category-section.women .clothing-card h3 {
     color: #f2689e !important;
     transition: all 0.3s ease;
 }
 
-/* Kids' Collection - أزرق */
 .category-section.kids .clothing-card h3 {
     color: #00d2ff !important;
     transition: all 0.3s ease;
 }
 
-/* 2. تنسيق SHOP NOW (أبيض للكل في الحالة العادية) */
-
 .clothing-card a, 
 .clothing-card a i {
-    color: #ffffff !important; /* لون أبيض دايماً */
+    color: #ffffff !important; 
     text-decoration: none !important;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-weight: 600;
-    transition: all 0.4s ease-in-out; /* حركة ناعمة جداً */
+    transition: all 0.4s ease-in-out; 
 }
 
-/* 3. تأثير الـ Hover (لما الماوس يلمس الكارت أو اللينك) */
-
-/* لما تلمس الكارت.. الـ SHOP NOW والسهم يقلبوا Pink عند الكل */
 .clothing-card:hover a, 
 .clothing-card:hover a i {
-    color: #f2689e !important; /* اللون البينك وقت الـ Hover */
+    color: #f2689e !important; 
 }
 
-/* حركة السهم لوحدها (يزحف يمين) */
 .clothing-card:hover a i {
     transform: translateX(10px);
 }
 
-/* توهج خفيف للعناوين لما تلمس الكارت (Glow Effect) */
 .category-section.women .clothing-card:hover h3 {
     text-shadow: 0 0 15px rgba(242, 104, 158, 0.4);
 }
@@ -530,33 +497,29 @@ html, body {
     text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
 }
 
-/* 1. الحاوية بتاعة الصورة */
 .product-image {
     width: 100%;
-    height: 400px; /* ثبت الطول ده عشان كل الصور تبقى مقاس واحد */
-    overflow: hidden; /* عشان لو الصورة كبيرة متطلعش بره الإطار */
-    border: 2px solid rgba(255, 255, 255, 0.1); /* الإطار اللي كنت عامله */
-    border-radius: 10px 10px 0 0; /* لو عايز حواف مدورة من فوق بس */
-    padding: 0 !important; /* أهم سطر: بيلغي أي مسافة بين الصورة والإطار */
+    height: 400px; 
+    overflow: hidden; 
+    border: 2px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 10px 10px 0 0; 
+    padding: 0 !important; 
     margin: 0 !important;
-    background: #000; /* خلفية سودة لو الصورة متحملتش */
+    background: #000; 
 }
 
-/* 2. الصورة نفسها جوه الحاوية */
 .product-image img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* السحر هنا: بيخلي الصورة تملا المربع بدون ما تتمط */
-    object-position: center; /* بيخلي نص الصورة هو اللي باين */
-    display: block; /* بيلغي المسافة الرفيعة اللي بتبقى تحت الصور */
+    object-fit: cover !important; 
+    object-position: center; 
+    display: block; 
     transition: transform 0.5s ease;
 }
 
-/* 3. تأثير الـ Hover (الزووم اللي عملناه) */
 .product-card:hover .product-image img {
     transform: scale(1.1);
 }
-
 
 /*About page*/
 .head h2{
@@ -623,7 +586,6 @@ html, body {
     opacity: 0.6;
 }
 
-/* Comparison Section Styling */
 .comparison-section {
     padding: 60px 40px;
     margin-top: 50px;
@@ -668,103 +630,6 @@ html, body {
 
 .status-yes { color: #00ff88; }
 .status-no { color: #ff4d4d; }
-
-/*Home page*/
-.banner { 
-    padding-top: 150px; 
-}
-
-.brands-title, .new-arrivals {
-    position: absolute;
-    top: 0;
-    font-size: 32px;
-    font-family: Arial, sans-serif;
-    color: white;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    font-style: italic; 
-    font-weight: bold; 
-    border-bottom: 3px solid #ff007f; 
-    padding-bottom: 5px;
-    white-space: nowrap;
-}
-
-.brands-title {
-    left: 10px;
-}
-
-.new-arrivals {
-    left: 850px;
-}
-
-.brands-header-container {
-    position: relative; 
-    width: 100%;
-    height: 80px; 
-    margin-top: 80px; 
-    margin-bottom: 20px;
-}
-
-.grid-brands {
-    display: grid;
-    grid-template-columns: 450px 1fr;
-    gap: 50px;
-    align-items: start;
-    padding-left: 0px;
-    margin-top: 20px; 
-}
-
-.brands img {
-    display: block;
-    width: 400px;
-    height: 120px;
-    margin-bottom: 20px; 
-    border-radius: 12px;
-    object-fit: contain;
-    background-color: white;
-    transition: 0.3s;
-}
-
-.model-video img, .model-video video { 
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-/*Footer*/
-.site-footer { 
-    padding: 60px 0 20px; 
-    border-top: 1px solid var(--glass-border); 
-    margin-top: 50px; 
-}
-
-.footer-grid { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 40px; 
-    justify-content: space-between; 
-}
-
-.footer-column h2 { 
-    color: var(--brand-pink); 
-    margin-bottom: 15px; 
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.footer-column p, .footer-column a { 
-    color: #ccc; 
-    text-decoration: none; 
-    font-size: 14px; 
-    line-height: 2; 
-}
-
-.footer-bottom {
-    text-align:center;
-    font-size:10px;
-    color:#ccc;
-}
 
 /*product*/
 /* الحاوية الأساسية للأيقونة والرقم */
