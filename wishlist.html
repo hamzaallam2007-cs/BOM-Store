@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wishlist - BOM Store</title>
+<title>BOM Store-Wishlist</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="BOM.css">
 <link rel="icon" type="image/png" href="images/logo.png">
-</style>
 </head>
 <body>
 
@@ -91,13 +90,16 @@
 
 <section class="wishlist-section">
 <h1>Suggestions</h1>
+</section>
 
 <div class="product-grid">
    
 <div class="suggestions">
 
   <div class="suggestions-wrapper">
-    
+
+    <button class="arrow left">&#10094;</button>
+
     <div class="suggestion-list" id="slider">
 
   <div class="suggestion-card">
@@ -165,8 +167,8 @@
     <button class="arrow right">&#10095;</button>
 
   </div>
-
-
+</div>
+</div>
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-column">
@@ -210,19 +212,10 @@ document.querySelector(".arrow.right").onclick = () => {
     behavior: "smooth"
   });
 };
+
 </script>
 
-<script>
-let prices = document.querySelectorAll(".price");
-let total = 0;
 
-prices.forEach(price => {
-  total += Number(price.textContent);
-});
-
-document.getElementById("total").textContent = "EGP " + total;
-document.getElementById("subtotal").textContent = "EGP " + total;
-</script>
 
 <script>
 let cartCount = 0;
