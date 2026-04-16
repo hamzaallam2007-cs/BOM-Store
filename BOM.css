@@ -1806,6 +1806,11 @@ h5{
 }
 
 /* SUGGESTIONS (FULL WIDTH BELOW) */
+.suggestions h3{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
 .suggestion-list {
   display: flex;
   gap: 15px;
@@ -2117,6 +2122,7 @@ h5{
 
 .wishlist-section h1{
     margin-top:40px;
+    margin-left: 30px;
 } 
 .add-cart,
 .remove-item {
