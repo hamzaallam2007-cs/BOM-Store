@@ -2103,14 +2103,3 @@ h5{
     color: white;
     cursor: pointer;
 }
-.heart-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 22px;
-  color: white;
-  cursor: pointer;
-}
-.heart-btn.active {
-  color: red;
-}
