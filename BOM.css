@@ -121,8 +121,31 @@ html, body {
 }
 
 .account-btn {
+  display: inline-block;
+   background-color: var(--brand-pink);
+    border: 2px solid var(--brand-pink);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+  text-decoration: none;
+      color: black;
+
+}
+
+.account-btn:hover {
+  background-color: black;
+    border-color: black;
+    transform: translateY(-2px);
+        color: var(--brand-pink);
+
+}
+
+/*.account-btn {
     background-color: var(--brand-pink);
-    color: black;
     border: 2px solid var(--brand-pink);
     padding: 8px 20px;
     border-radius: 20px;
@@ -135,10 +158,18 @@ html, body {
 
 .account-btn:hover {
     background-color: black;
-    color: var(--brand-pink);
     border-color: black;
     transform: translateY(-2px);
 }
+
+.account-btn a{
+    text-decoration: none;
+    color: black;
+}
+
+.account-btn a:hover{
+    color: var(--brand-pink);
+}*/
 
 /*Account page*/
 .edit-btn {
@@ -1713,6 +1744,13 @@ h5{
   color: white;
 }
 
+.trash{
+    position: absolute;
+  left: 950px;     
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
 
 .cash-box {
   background: rgba(0,0,0,0.2);
@@ -1765,6 +1803,20 @@ h5{
   appearance: none;
   cursor: pointer;
 }
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+}
 .checkout-btn {
   width: 100%;
   margin-top: 20px;
@@ -1785,6 +1837,11 @@ h5{
 }
 
 /* SUGGESTIONS (FULL WIDTH BELOW) */
+.suggestions h3{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
 .suggestion-list {
   display: flex;
   gap: 15px;
@@ -2096,21 +2153,11 @@ h5{
 
 .wishlist-section h1{
     margin-top:40px;
+    margin-left: 30px;
 } 
 .add-cart,
 .remove-item {
     background-color: transparent;
     color: white;
     cursor: pointer;
-}
-.heart-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 22px;
-  color: white;
-  cursor: pointer;
-}
-.heart-btn.active {
-  color: red;
 }

@@ -232,3 +232,40 @@ function sendMessage() {
 
   input.value = "";
 }
+
+// cart
+
+//arrows
+const slider = document.getElementById("slider");
+
+document.querySelector(".arrow.left").onclick = () => {
+  slider.scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+};
+
+document.querySelector(".arrow.right").onclick = () => {
+  slider.scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+};
+
+
+// sum of orders
+let prices = document.querySelectorAll(".price");
+let total = 0;
+
+prices.forEach(price => {
+  total += Number(price.textContent);
+});
+
+document.getElementById("total").textContent = "EGP " + total;
+document.getElementById("subtotal").textContent = "EGP " + total;
+
+
+  //alert
+function confirmOrder() {
+  alert("Order confirmed");
+}
