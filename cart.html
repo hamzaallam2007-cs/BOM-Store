@@ -47,15 +47,16 @@
   <div class="cart-items">
 
     <div class="item">
+      <span class="trash"><i class="fa-solid fa-trash"></i></span>
       <img src="images/addidas shirt.jpg" alt="shirt"> 
       <div class="details">
         <p>White Shirt-Addidas</p>
         <p>EGP <span class="price">3650</span></p> 
-        <span class="trash"><i class="fa-solid fa-trash"></i></span>
       </div>
     </div>
 
     <div class="item">
+       <span class="trash"><i class="fa-solid fa-trash"></i></span>
       <img src="images/Baby knit dress with hat-girls.jpeg">
       <div class="details">
         <p>Baby Knit Dress-MotherCare</p>
@@ -64,6 +65,7 @@
     </div>
 
     <div class="item">
+       <span class="trash"><i class="fa-solid fa-trash"></i></span>
       <img src="images/black cap.jpg" alt="cap">
       <div class="details">
         <p>Black Cap-GAP</p>
@@ -72,6 +74,7 @@
     </div>
 
     <div class="item">
+       <span class="trash"><i class="fa-solid fa-trash"></i></span>
       <img src="images/dark blue pullover.jpg" alt="pullover">
       <div class="details">
         <p>Dark Blue Pullover-Gucci</p>
@@ -80,6 +83,7 @@
     </div>
 
     <div class="item">
+       <span class="trash"><i class="fa-solid fa-trash"></i></span>
       <img src="images/grey nike air jordan.jpg" alt="shoes">
       <div class="details">
         <p>Grey Air Jordan-Nike</p>
@@ -109,20 +113,22 @@
 
   <h3>Summary</h3>
 
-  
-    <p>Subtotal
-    <span id="subtotal" >EGP 0</span></p>
+<div class="row">
+  <span>Subtotal</span>
+  <span id="subtotal">EGP 0</span>
+</div>
 
-    <p>Shipping
-    <span >Free</span></p>
-  
+<div class="row">
+  <span>Shipping</span>
+  <span>Free</span>
+</div>
 
-  
-    Total
-    <span id="total">EGP 0</span>
-  
+<div class="row total">
+  <span>Total</span>
+  <span id="total">EGP 0</span>
+</div>
 
-  <button class="checkout-btn">Checkout</button>
+<button class="checkout-btn" onclick="confirmOrder()">Checkout</button>
 </div>
 
 </div>
@@ -199,37 +205,7 @@
 
 
 
-    <script>
-const slider = document.getElementById("slider");
-
-document.querySelector(".arrow.left").onclick = () => {
-  slider.scrollBy({
-    left: -300,
-    behavior: "smooth"
-  });
-};
-
-document.querySelector(".arrow.right").onclick = () => {
-  slider.scrollBy({
-    left: 300,
-    behavior: "smooth"
-  });
-};
-</script>
-
-<script>
-let prices = document.querySelectorAll(".price");
-let total = 0;
-
-prices.forEach(price => {
-  total += Number(price.textContent);
-});
-
-document.getElementById("total").textContent = "EGP " + total;
-document.getElementById("subtotal").textContent = "EGP " + total;
-</script>
-
-  
+    
 
 
 </div>
@@ -260,7 +236,8 @@ document.getElementById("subtotal").textContent = "EGP " + total;
         </div>
     </footer>
 
-
+<script src="BOM.js">
+</script>
 </body>
 
 </html>
