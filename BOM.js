@@ -1,3 +1,7 @@
+/*Home*/
+let message=alert('Welcome to BOM store🛒🛍️')
+console.log(message)
+
 /*men*/
 // استهداف العناصر من الـ DOM
 const categoryFilter = document.getElementById('categoryFilter');
