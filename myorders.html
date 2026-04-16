@@ -221,6 +221,22 @@
         </div>
     </footer>
 
-    <script src="BOM.js"></script>
+    <script>
+        const slider = document.getElementById("slider");
+
+document.querySelector(".arrow.left").onclick = () => {
+  slider.scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+};
+
+document.querySelector(".arrow.right").onclick = () => {
+  slider.scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+};
+    </script>
 </body>
 </html>

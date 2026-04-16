@@ -1453,6 +1453,7 @@ body {
     border: 1px solid #444;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .p-extra-info {
