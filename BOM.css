@@ -144,33 +144,6 @@ html, body {
 
 }
 
-/*.account-btn {
-    background-color: var(--brand-pink);
-    border: 2px solid var(--brand-pink);
-    padding: 8px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: all 0.4s ease;
-}
-
-.account-btn:hover {
-    background-color: black;
-    border-color: black;
-    transform: translateY(-2px);
-}
-
-.account-btn a{
-    text-decoration: none;
-    color: black;
-}
-
-.account-btn a:hover{
-    color: var(--brand-pink);
-}*/
-
 /*Account page*/
 .edit-btn {
     background: transparent;
@@ -586,21 +559,29 @@ html, body {
 
 
 /*About page*/
-.head {
+.head h2{
     color: var(--brand-pink);
 }
 
-.dtitle {
+.head dt{
     color: #F0298A;
+    font-weight: bold;
+    font-size: larger;
 }
 
-.list {
+.head ul{
     color: #E388B5;
     padding-left: 40px;
 }
 
-h4{
+.head dd{
+    margin-bottom: 15px;
+}
+
+.reviewer{
     text-align: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
     margin-right: 50%;
     font-style: italic;
     font-weight: 350;
@@ -765,9 +746,11 @@ h4{
     justify-content: space-between; 
 }
 
-.footer-column h3 { 
+.footer-column h2 { 
     color: var(--brand-pink); 
     margin-bottom: 15px; 
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .footer-column p, .footer-column a { 
@@ -1534,13 +1517,21 @@ body {
 }
 
 /*Contact page*/
-h5{
+.welcome p{
     text-align: center;
     font-weight: lighter;
     font-style: italic;
     padding-bottom: 50px;
     padding-top: 20px;
     font-size: 19px;
+}
+
+.service{
+    text-align: right;
+    margin-right: 50%;
+    font-style: italic;
+    font-weight: 350;
+    color: #ffffff !important;
 }
 
 .contact-grid{
@@ -1597,28 +1588,31 @@ h5{
     padding-top: 70px;
 }
 
-.links a {
+.links i {
   margin: 0 10px;
   font-size: 24px;
   color: var(--brand-dark);
   transition: 0.3s;
 }
 
-.links a:hover {
+.links i:hover {
   color: var(--brand-pink);
 }
 
-.links h3{
+.links p{
     color: var(--brand-pink);
     padding-bottom: 10px;
-    font-weight: lighter;
+    font-weight: bold;
+    font-size: large;
 }
 
-.links h4{
+.social{
     color: #ffffff;
     text-align: left;
-    padding-bottom: 2px;
+    padding-bottom: 10px;
     font-style: normal;
+    margin-right: 50%;
+    font-weight: 350;
 }
 
 
@@ -1902,6 +1896,7 @@ h5{
 }
 
 
+/*Women*/
 
 /*filter*/
 .sidebar {
